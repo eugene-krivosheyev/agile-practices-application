@@ -1,0 +1,96 @@
+<configuration>
+    <springProfile name="test, it">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%date{ISO8601} %level %thread %logger{20} %file:%line - %msg%n</pattern>
+            </encoder>
+            <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+                <level>WARN</level>
+            </filter>
+        </appender>
+
+        <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+            <file>log/dbo-test.log</file>
+            <append>true</append>
+            <immediateFlush>false</immediateFlush>
+            <encoder>
+                <pattern>%date{ISO8601} %level %thread %logger{20} %file:%line - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <root level="DEBUG">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="FILE"/>
+        </root>
+    </springProfile>
+
+
+    <springProfile name="qa">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%date{ISO8601} %level %thread %logger{20} %file:%line - %msg%n</pattern>
+            </encoder>
+            <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+                <level>WARN</level>
+            </filter>
+        </appender>
+
+        <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+            <file>log/dbo.log</file>
+            <append>true</append>
+            <immediateFlush>true</immediateFlush>
+            <encoder>
+                <pattern>%date{ISO8601} %level %thread %logger{20} %file:%line - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="FILE"/>
+        </root>
+    </springProfile>
+
+
+    <springProfile name="prod">
+        <appender name="ROLLING-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>log/dbo.log</file>
+
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>log/dbo-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+                <maxFileSize>1MB</maxFileSize>
+                <maxHistory>30</maxHistory> <!-- days -->
+                <totalSizeCap>100Mb</totalSizeCap>
+            </rollingPolicy>
+
+            <append>true</append>
+            <immediateFlush>false</immediateFlush>
+            <encoder>
+                <pattern>%date{ISO8601} %level %thread %logger{20} %file:%line - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+            <destination>84.201.134.115:5000</destination> <!-- TODO Set Logstash host -->
+            <keepAliveDuration>15 minutes</keepAliveDuration>
+            <writeTimeout>1 minute</writeTimeout>
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+                <customFields>{"appname":"dbo", "stage":"PREPROD"}</customFields>
+                <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
+                    <maxDepthPerThrowable>30</maxDepthPerThrowable>
+                    <maxLength>2048</maxLength>
+                    <shortenedClassNameLength>20</shortenedClassNameLength>
+                    <exclude>sun\.reflect\..*\.invoke.*</exclude>
+                    <exclude>net\.sf\.cglib\.proxy\.MethodProxy\.invoke</exclude>
+                    <rootCauseFirst>true</rootCauseFirst>
+                    <inlineHash>true</inlineHash>
+                </throwableConverter>
+            </encoder>
+        </appender>
+
+        <root level="WARN">
+            <appender-ref ref="ROLLING-FILE"/>
+            <appender-ref ref="LOGSTASH"/>
+        </root>
+        <logger name="com.acme.dbo" level="INFO" />  <!-- Business events -->
+    </springProfile>
+</configuration>

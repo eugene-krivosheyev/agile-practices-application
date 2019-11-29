@@ -1,0 +1,123 @@
+features:
+  account: true
+  client: true
+
+---
+
+server:
+  port: 8080
+  servlet:
+    context-path: /dbo
+
+spring:
+  profiles:
+    active: prod
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: true
+
+endpoints:
+  shutdown:
+    enabled: true
+
+---
+
+spring:
+  profiles: test
+  main:
+    lazy-initialization: true
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+---
+
+spring:
+  profiles: it
+  main:
+    lazy-initialization: true
+  datasource:
+    driverClassName: org.apache.derby.jdbc.EmbeddedDriver
+    url: jdbc:derby:memory:dbo-db;create=true
+    username: APP
+    password: APP
+    hikari:
+      poolName: hikari-connection-pool
+      maximumPoolSize: 2
+      minimumIdle: 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  liquibase: #https://javadeveloperzone.com/spring-boot/spring-boot-liquibase-example/
+    enabled: true
+    contexts: prod, qa
+    change-log: classpath:/db-changelog.xml
+    liquibaseSchema: liquibase
+    user: APP
+    password: APP
+
+---
+
+spring:
+  profiles: qa
+  datasource:
+    driverClassName: org.apache.derby.jdbc.EmbeddedDriver
+    url: jdbc:derby:dbo-db;create=true
+    username: APP
+    password: APP
+    hikari:
+      poolName: hikari-connection-pool
+      maximumPoolSize: 5
+      minimumIdle: 1
+      idleTimeout: 600000
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    enabled: true
+    contexts: prod, qa
+    change-log: classpath:/db-changelog.xml
+    liquibaseSchema: liquibase
+    user: APP
+    password: APP
+    rollback-file: liquibase-rollback.sql
+    test-rollback-on-update: true
+
+---
+
+spring:
+  profiles: prod
+  datasource:
+    platform: postgres #In order to run schema-postgres.sql before Liquibase
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql:dbo-db
+    username: dbo
+    password: P@ssw0rd
+    initialization-mode: always
+    hikari:
+      poolName: hikari-connection-pool
+      maximumPoolSize: 10
+      minimumIdle: 2
+      idleTimeout: 1800000
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    enabled: true
+    contexts: prod
+    change-log: classpath:/db-changelog.xml
+    liquibaseSchema: liquibase
+    user: dbo
+    password: P@ssw0rd
+    rollback-file: liquibase-rollback.sql
+    test-rollback-on-update: true

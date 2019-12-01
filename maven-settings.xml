@@ -16,7 +16,7 @@
         <server>
             <id>dbo-artifacts-server</id>
             <username>admin</username> <!-- TODO Set Artifacts Server login -->
-            <password>2019-10-raiffeisen</password> <!-- TODO Set Artifacts Server password -->
+            <password>Ag1lePracticeS</password> <!-- TODO Set Artifacts Server password -->
             <!-- To encrypt use https://maven.apache.org/guides/mini/guide-encryption.html -->
         </server>
     </servers>

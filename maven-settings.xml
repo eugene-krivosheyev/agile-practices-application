@@ -1,0 +1,23 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <mirrors>
+        <mirror>
+            <id>dbo-artifacts-server</id>
+            <!-- TODO Set Artifacts Server repository URL from http://84.201.134.115:8081/artifactory/webapp/#/home -> dbo -->
+            <url>http://84.201.134.115:8081/artifactory/dbo</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+
+    <servers>
+        <server>
+            <id>dbo-artifacts-server</id>
+            <username>admin</username> <!-- TODO Set Artifacts Server login -->
+            <password>2019-10-raiffeisen</password> <!-- TODO Set Artifacts Server password -->
+            <!-- To encrypt use https://maven.apache.org/guides/mini/guide-encryption.html -->
+        </server>
+    </servers>
+</settings>

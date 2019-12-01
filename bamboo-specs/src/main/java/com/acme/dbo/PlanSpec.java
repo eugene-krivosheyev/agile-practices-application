@@ -76,7 +76,7 @@ public class PlanSpec {
                                         new MavenTask()
                                                 .description("run-sonar-analysis")
                                                 .goal("sonar:sonar")
-                                                .environmentVariables("MAVEN_OPTS=\"-Dsonar.host.url=http://84.201.134.115:9000 -Dsonar.login=109985179fb6197468d72874627de40923006f62 -Djava.awt.headless=true\"")
+                                                .environmentVariables("MAVEN_OPTS=\"-DskipTests -Dsonar.host.url=http://84.201.134.115:9000 -Dsonar.login=109985179fb6197468d72874627de40923006f62 -Djava.awt.headless=true\"")
                                                 .jdk("JDK 1.8")
                                                 .executableLabel("Maven 3.6"),
                                         new MavenTask()

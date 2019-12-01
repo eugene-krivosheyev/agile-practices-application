@@ -72,13 +72,13 @@ public class PlanSpec {
                                                 .jdk("JDK 1.8")
                                                 .executableLabel("Maven 3.6")
                                                 .hasTests(true)
-                                                .testResultsPath("**/target/surefire-reports/**/*.xml, **/target/failsafe-reports/**/*.xml")),
+                                                .testResultsPath("**/target/surefire-reports/**/*.xml, **/target/failsafe-reports/**/*.xml"),
                                         new MavenTask()
                                                 .description("run-sonar-analysis")
                                                 .goal("sonar:sonar")
                                                 .environmentVariables("MAVEN_OPTS=\"-Dsonar.host.url=http://84.201.134.115:9000 -Dsonar.login=3005b272830360bb40f0feab92a01dee720fbd3b -Djava.awt.headless=true\"")
                                                 .jdk("JDK 1.8")
-                                                .executableLabel("Maven 3.6")),
+                                                .executableLabel("Maven 3.6"),
                                         new MavenTask()
                                                 .description("upload-distr-to-artifactiry")
                                                 .goal("deploy")

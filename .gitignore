@@ -13,3 +13,5 @@ target/
 
 # Application
 log/
+dbo-db/
+liquibase-rollback.sql

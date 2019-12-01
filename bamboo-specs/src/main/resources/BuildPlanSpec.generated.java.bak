@@ -1,0 +1,130 @@
+import com.atlassian.bamboo.specs.api.BambooSpec;
+import com.atlassian.bamboo.specs.api.builders.AtlassianModule;
+import com.atlassian.bamboo.specs.api.builders.BambooKey;
+import com.atlassian.bamboo.specs.api.builders.BambooOid;
+import com.atlassian.bamboo.specs.api.builders.permission.PermissionType;
+import com.atlassian.bamboo.specs.api.builders.permission.Permissions;
+import com.atlassian.bamboo.specs.api.builders.permission.PlanPermissions;
+import com.atlassian.bamboo.specs.api.builders.plan.Job;
+import com.atlassian.bamboo.specs.api.builders.plan.Plan;
+import com.atlassian.bamboo.specs.api.builders.plan.PlanIdentifier;
+import com.atlassian.bamboo.specs.api.builders.plan.Stage;
+import com.atlassian.bamboo.specs.api.builders.plan.artifact.Artifact;
+import com.atlassian.bamboo.specs.api.builders.plan.branches.BranchCleanup;
+import com.atlassian.bamboo.specs.api.builders.plan.branches.PlanBranchManagement;
+import com.atlassian.bamboo.specs.api.builders.plan.configuration.ConcurrentBuilds;
+import com.atlassian.bamboo.specs.api.builders.project.Project;
+import com.atlassian.bamboo.specs.api.builders.task.AnyTask;
+import com.atlassian.bamboo.specs.builders.task.CheckoutItem;
+import com.atlassian.bamboo.specs.builders.task.MavenTask;
+import com.atlassian.bamboo.specs.builders.task.VcsCheckoutTask;
+import com.atlassian.bamboo.specs.builders.trigger.BitbucketServerTrigger;
+import com.atlassian.bamboo.specs.util.BambooServer;
+import com.atlassian.bamboo.specs.util.MapBuilder;
+
+@BambooSpec
+public class PlanSpec {
+
+    public Plan plan() {
+        final Plan plan = new Plan(new Project()
+                .oid(new BambooOid("1hgcsp4de3bpd"))
+                .key(new BambooKey("DBO"))
+                .name("dbo"),
+            "build",
+            new BambooKey("BUILD"))
+            .oid(new BambooOid("1hg33hj069jb5"))
+            .pluginConfigurations(new ConcurrentBuilds())
+            .stages(new Stage("Default Stage")
+                    .jobs(new Job("make-distr",
+                            new BambooKey("JOB1"))
+                            .artifacts(new Artifact()
+                                    .name("dbo-distr")
+                                    .copyPattern("dbo-1.0-SNAPSHOT.jar")
+                                    .location("target")
+                                    .shared(true)
+                                    .required(true))
+                            .tasks(new VcsCheckoutTask()
+                                    .description("checkout")
+                                    .checkoutItems(new CheckoutItem().defaultRepository()),
+                                new MavenTask()
+                                    .description("maven-full-build")
+                                    .goal("clean verify -T 1C")
+                                    .environmentVariables("MAVEN_OPTS=\"-Xms512m -Xmx1g -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback.xml -Djava.awt.headless=true\"")
+                                    .jdk("JDK 1.8")
+                                    .executableLabel("Maven 3.6")
+                                    .hasTests(true)
+                                    .testResultsPath("**/target/surefire-reports/**/*.xml, **/target/failsafe-reports/**/*.xml"),
+                                new AnyTask(new AtlassianModule("ch.mibex.bamboo.sonar4bamboo:sonar4bamboo.maven3task"))
+                                    .description("sonar-analysis")
+                                    .configuration(new MapBuilder()
+                                            .put("incrementalFileForInclusionList", "")
+                                            .put("chosenSonarConfigId", "1")
+                                            .put("useGradleWrapper", "")
+                                            .put("sonarMainBranch", "master")
+                                            .put("useNewGradleSonarQubePlugin", "")
+                                            .put("sonarJavaSource", "")
+                                            .put("sonarProjectName", "")
+                                            .put("buildJdk", "JDK 1.8")
+                                            .put("gradleWrapperLocation", "")
+                                            .put("sonarLanguage", "")
+                                            .put("sonarSources", "")
+                                            .put("useGlobalSonarServerConfig", "true")
+                                            .put("incrementalMode", "")
+                                            .put("sonarPullRequestAnalysis", "")
+                                            .put("failBuildForBrokenQualityGates", "true")
+                                            .put("msbuilddll", "")
+                                            .put("sonarTests", "")
+                                            .put("incrementalNoPullRequest", "incrementalModeFailBuildField")
+                                            .put("failBuildForSonarErrors", "")
+                                            .put("sonarProjectVersion", "")
+                                            .put("sonarBranch", "")
+                                            .put("executable", "Maven 3.6")
+                                            .put("illegalBranchCharsReplacement", "_")
+                                            .put("failBuildForTaskErrors", "true")
+                                            .put("incrementalModeNotPossible", "incrementalModeRunFullAnalysis")
+                                            .put("sonarJavaTarget", "")
+                                            .put("environmentVariables", "")
+                                            .put("incrementalModeGitBranchPattern", "")
+                                            .put("legacyBranching", "")
+                                            .put("replaceSpecialBranchChars", "")
+                                            .put("additionalProperties", "")
+                                            .put("autoBranch", "true")
+                                            .put("sonarProjectKey", "")
+                                            .put("incrementalModeBambooUser", "")
+                                            .put("overrideSonarBuildConfig", "")
+                                            .put("workingSubDirectory", "")
+                                            .build()),
+                                new MavenTask()
+                                    .description("upload-distr-to-artifactiry")
+                                    .goal("deploy -T 1C")
+                                    .environmentVariables("MAVEN_OPTS=\"-DskipTests -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback.xml -Djava.awt.headless=true\"")
+                                    .jdk("JDK 1.8")
+                                    .executableLabel("Maven 3.6"))))
+            .linkedRepositories("dbo-app-master")
+
+            .triggers(new BitbucketServerTrigger())
+            .planBranchManagement(new PlanBranchManagement()
+                    .delete(new BranchCleanup())
+                    .notificationForCommitters());
+        return plan;
+    }
+
+    public PlanPermissions planPermission() {
+        final PlanPermissions planPermission = new PlanPermissions(new PlanIdentifier("DBO", "BUILD"))
+            .permissions(new Permissions()
+                    .userPermissions("admin", PermissionType.EDIT, PermissionType.VIEW, PermissionType.ADMIN, PermissionType.CLONE, PermissionType.BUILD));
+        return planPermission;
+    }
+
+    public static void main(String... argv) {
+        //By default credentials are read from the '.credentials' file.
+        BambooServer bambooServer = new BambooServer("http://84.201.134.115:8085");
+        final PlanSpec planSpec = new PlanSpec();
+
+        final Plan plan = planSpec.plan();
+        bambooServer.publish(plan);
+
+        final PlanPermissions planPermission = planSpec.planPermission();
+        bambooServer.publish(planPermission);
+    }
+}

@@ -2,34 +2,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Shop {
-    public static List getAllItems(String filter) {
+    private ItemsStorage items;
+    private PromoStorage promo;
+
+    public List getAllItems(String filter) {
         if (filter == "") {
             throw new IllegalArgumentException("filter MUST NOT be null");
         }
 
-        List storeAllItems = getStoreItems();
-        List promoItems = getPromoItems();
+        List storeAllItems = items.getStoreItems();
+        List promoItems = promo.getPromoItems();
         storeAllItems.addAll(promoItems);
 
         return storeAllItems;
-    }
-
-    private static List getStoreItems() {
-        List storeItems = new ArrayList();
-
-        Item testItem = new Item(1, "sweeter");
-
-        storeItems.add(testItem);
-        return storeItems;
-    }
-
-    private static List getPromoItems() {
-        List promoItems = new ArrayList();
-
-        Item testItem = new Item(2, "shapka");
-
-        promoItems.add(testItem);
-        return promoItems;
     }
 }
 

@@ -1,9 +1,8 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Shop {
-    private ItemsStorage items;
-    private PromoStorage promo;
+    private ItemsStorage items = new StubItemsStorage();
+    private PromoStorage promo = new StubPromoStorage();
 
     public List getAllItems(String filter) {
         if (filter == "") {

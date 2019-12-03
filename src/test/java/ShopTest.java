@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ShopTest {
     @Test
     public void shouldGetAllItemsWhenNoFilterError() {
-        final List<Item> items = Shop.getAllItems("dummy filter");
+        final List<Item> items = new Shop().getAllItems("dummy filter");
 
         assertThat(items).containsExactly(
                         new Item(1, "sweeter"),

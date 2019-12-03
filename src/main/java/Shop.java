@@ -4,7 +4,6 @@ public class Shop {
     private ItemsStorage items = new StubItemsStorage();
     private PromoStorage promo = new StubPromoStorage();
 
-
     public List getAllItems(String filter) {
         if (filter == "") {
             throw new IllegalArgumentException("filter MUST NOT be null");

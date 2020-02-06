@@ -30,7 +30,7 @@ curl --request POST http://localhost:8080/dbo/actuator/shutdown
 ## Ручное копирование приложения на пре-прод и запуск
 - Ручное копирование scp
 ```bash
-./mvnw package -DskipTests -Djava.awt.headless=true -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback-quiet.xml
+mvn package -DskipTests -Djava.awt.headless=true -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback-quiet.xml
 scp -i ~/Dropbox/Eugene/Backups/agile-practices-dev.pem target/dbo-1.0-SNAPSHOT.jar admin@84.201.157.139:/home/dboadmin/dbo/
 ```
 

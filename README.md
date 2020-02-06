@@ -1,5 +1,5 @@
 # Authors
-@Mashchenko
+@Mashchenko,Malov
 
 # Install environment
 ```bash

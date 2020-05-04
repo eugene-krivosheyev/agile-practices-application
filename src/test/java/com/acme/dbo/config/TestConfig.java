@@ -15,6 +15,8 @@ import static java.lang.System.*;
 
 @TestConfiguration
 public class TestConfig {
+    private ChromeDriver driver;
+    
     @Lazy @Bean
     @Profile("it")
     public WebDriver webDriver() {

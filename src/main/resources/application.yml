@@ -22,10 +22,6 @@ management:
     shutdown:
       enabled: true
 
-endpoints:
-  shutdown:
-    enabled: true
-
 ---
 
 spring:

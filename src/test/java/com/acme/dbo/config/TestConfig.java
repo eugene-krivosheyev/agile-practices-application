@@ -1,5 +1,7 @@
 package com.acme.dbo.config;
 
+import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -53,6 +55,12 @@ public class TestConfig {
         ((JavascriptExecutor)driver).executeScript("window.open()");
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
+        //endregion
+
+        //region Selenide setup
+        WebDriverRunner.setWebDriver(driver);
+        Configuration.timeout = 5_000;
+        Configuration.reportsFolder = "target/surefire-reports";
         //endregion
 
         return driver;

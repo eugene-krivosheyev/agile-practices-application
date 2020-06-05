@@ -42,10 +42,6 @@ public class AccountUatIT {
     public void setUp() {
         mainPage = "http://localhost:" + serverPort + "/dbo/swagger-ui.html";
 
-        WebDriverRunner.setWebDriver(driver);
-        Configuration.timeout = 5_000;
-        Configuration.reportsFolder = "target/surefire-reports";
-
         open(mainPage);
         $(byClassName("main")).shouldBe(visible)
                 .$(Selectors.withText("Base URL:")).shouldBe(visible);
@@ -53,7 +49,7 @@ public class AccountUatIT {
 
     @AfterAll
     public void closeBrowser() {
-        driver.quit();
+        driver.close();
     }
 
     @Test

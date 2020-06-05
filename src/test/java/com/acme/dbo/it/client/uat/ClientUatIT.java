@@ -32,16 +32,10 @@ public class ClientUatIT {
     @LocalServerPort int serverPort;
     @Autowired WebDriver driver;
 
-    @BeforeAll
-    public void setUp() {
-        WebDriverRunner.setWebDriver(driver);
-        Configuration.timeout = 5_000;
-        Configuration.reportsFolder = "target/surefire-reports";
-    }
 
     @AfterAll
     public void closeBrowser() {
-        driver.quit();
+        driver.close();
     }
 
     @Test

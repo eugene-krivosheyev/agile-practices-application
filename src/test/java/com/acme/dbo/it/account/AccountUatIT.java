@@ -47,10 +47,10 @@ public class AccountUatIT {
                 .$(Selectors.withText("Base URL:")).shouldBe(visible);
     }
 
-    @AfterAll
-    public void closeBrowser() {
-        driver.close();
-    }
+//    @AfterAll
+//    public void closeBrowser() {
+//        driver.close();
+//    }
 
     @Test
     public void shouldGetAccountsWhenPrepopulatedDbHasSome() {

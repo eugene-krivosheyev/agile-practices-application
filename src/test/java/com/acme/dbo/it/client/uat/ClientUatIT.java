@@ -30,10 +30,10 @@ public class ClientUatIT {
     @Autowired WebDriver driver;
 
 
-//    @AfterAll
-//    public void closeBrowser() {
-//        driver.close();
-//    }
+    @AfterAll
+    public void closeBrowser() {
+        driver.quit();
+    }
 
     @Test
     public void shouldGetClientsWhenPrepopulatedDbHasSome() throws InterruptedException {

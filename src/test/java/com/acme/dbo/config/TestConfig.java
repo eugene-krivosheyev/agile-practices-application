@@ -45,19 +45,9 @@ public class TestConfig {
                 .addArguments("--disable-extensions")
                 .addArguments("--no-sandbox")
                 .addArguments("--start-maximized")
-                .addArguments("--window-size=800,2000")
                 .addArguments("--ignore-certificate-errors")
         );
-        //endregion
-
-        //region Performance hack setup
-        //always keep open tab to prevent closing driver at <code>driver.close()</code>
-        //note that <code>driver.quit()</code> closes driver anyway
         driver.manage().window().maximize();
-
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
         //endregion
 
         //region Selenide setup

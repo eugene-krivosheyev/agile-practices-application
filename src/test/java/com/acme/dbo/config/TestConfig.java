@@ -24,11 +24,9 @@ public class TestConfig {
     @Lazy @Bean
     @Profile("it")
     /**
-     * @Prototype
+     * @Prototype //TODO make correct working singleton on Linux
      */
     public WebDriver webDriver() {
-        //if (driver != null) return driver; //TODO make correct working singleton on Linux
-
         //region Driver setup
         String chromeDriverEnvLocation = getenv("webdriver.chrome.driver");
         String chromeDriverPropLocation = getProperty("webdriver.chrome.driver");

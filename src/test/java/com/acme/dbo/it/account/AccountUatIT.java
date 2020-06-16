@@ -1,15 +1,10 @@
 package com.acme.dbo.it.account;
 
 import com.acme.dbo.config.ScreenshotExceptionExtension;
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
-import com.codeborne.selenide.WebDriverRunner;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +28,8 @@ import static org.openqa.selenium.By.linkText;
 @ActiveProfiles("it")
 @Slf4j
 @FieldDefaults(level = PRIVATE)
+
+@Disabled
 public class AccountUatIT {
     @LocalServerPort int serverPort;
     @Autowired WebDriver driver;

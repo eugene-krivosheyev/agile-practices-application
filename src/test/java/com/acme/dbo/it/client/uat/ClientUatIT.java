@@ -5,6 +5,7 @@ import com.acme.dbo.it.client.uat.page.MainPage;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -25,6 +26,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ActiveProfiles("it")
 @Slf4j
 @FieldDefaults(level = PRIVATE)
+
+@Disabled
 public class ClientUatIT {
     @LocalServerPort int serverPort;
     @Autowired WebDriver driver;

@@ -1,8 +1,8 @@
 package com.acme.dbo.ut.account;
 
 import com.acme.dbo.account.controller.AccountController;
-import com.acme.dbo.account.dao.AccountRepository;
 import com.acme.dbo.account.domain.Account;
+import com.acme.dbo.account.service.AccountService;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,19 +29,19 @@ import static org.mockito.Mockito.verify;
 @FieldDefaults(level = PRIVATE)
 public class AccountControllerUnitTest {
     AccountController sut;
-    @Mock AccountRepository accountRepositoryMock;
+    @Mock AccountService accountServiceMock;
     @Mock Account accountStub;
 
     @BeforeEach
     public void setupSut() {
-        sut = new AccountController(accountRepositoryMock);
+        sut = new AccountController(accountServiceMock);
     }
 
     @Test
     public void shouldCallRepositoryAngGetAccountWhenMockedRepoHasOne() {
-        given(accountRepositoryMock.findAll()).willReturn(singletonList(accountStub));
+        given(accountServiceMock.getAccounts()).willReturn(singletonList(accountStub));
 
         assertThat(sut.getAccounts()).containsOnly(accountStub);
-        verify(accountRepositoryMock, times(1)).findAll();
+        verify(accountServiceMock, times(1)).getAccounts();
     }
 }

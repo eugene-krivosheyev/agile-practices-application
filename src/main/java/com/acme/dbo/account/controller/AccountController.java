@@ -1,7 +1,7 @@
 package com.acme.dbo.account.controller;
 
-import com.acme.dbo.account.dao.AccountRepository;
 import com.acme.dbo.account.domain.Account;
+import com.acme.dbo.account.service.AccountService;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.*;
+import java.util.Collection;
 
 import static lombok.AccessLevel.PRIVATE;
 import static lombok.AccessLevel.PUBLIC;
@@ -24,11 +24,11 @@ import static lombok.AccessLevel.PUBLIC;
 @AllArgsConstructor(access = PUBLIC)
 @Slf4j
 public class AccountController {
-    @Autowired AccountRepository accountRepository;
+    @Autowired AccountService accountService;
 
     @GetMapping
     @ApiOperation(value = "GetAccounts", notes = "Returned all created address of selected currency name")
     public Collection<Account> getAccounts() {
-        return accountRepository.findAll();
+        return accountService.getAccounts();
     }
 }

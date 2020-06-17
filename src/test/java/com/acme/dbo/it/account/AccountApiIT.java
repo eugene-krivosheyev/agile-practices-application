@@ -38,7 +38,7 @@ public class AccountApiIT {
 
         Account[] accountsFound = jsonMapper.readValue(accountsFoundJsonString, Account[].class);
 
-        assertThat(accountsFound).containsOnly(
+        assertThat(accountsFound).contains(
                 builder().clientId(1L).amount(0.).build(),
                 builder().clientId(1L).amount(100.).build(),
                 builder().clientId(2L).amount(200.).build()

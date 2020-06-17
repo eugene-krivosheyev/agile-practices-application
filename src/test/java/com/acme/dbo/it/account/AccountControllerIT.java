@@ -27,6 +27,6 @@ public class AccountControllerIT {
                 .stream()
                 .map(Account::getId)
                 .toArray()
-        ).containsOnly(1L,2L,3L);
+        ).contains(1L,2L,3L);
     }
 }

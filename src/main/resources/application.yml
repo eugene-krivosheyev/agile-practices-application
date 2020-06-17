@@ -4,7 +4,9 @@ features:
 
 ---
 
-spring.profiles.active: prod
+spring:
+  profiles.active: prod
+  jpa.properties.hibernate.generate_statistics: true
 
 server:
   port: 8080
@@ -14,7 +16,9 @@ server:
     maxThreads: 100
 
 management:
-  metrics.enable.all: true
+  metrics:
+    enable.all: true
+    web.server.request.autotime.enabled: true
   endpoints.web.exposure.include: '*'
   endpoint.shutdown.enabled: true
 

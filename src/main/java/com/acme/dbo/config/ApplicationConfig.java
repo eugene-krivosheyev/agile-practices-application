@@ -95,6 +95,8 @@ public class ApplicationConfig extends WebSecurityConfigurerAdapter {
 
     @Scheduled(fixedRate = 20_000)
     public void updateApacheHttpClientMetrics() {
+        if (apacheHttpClientConnectionManager == null) return; //NPE while tests
+
         Set<HttpRoute> routes = apacheHttpClientConnectionManager.getRoutes();
         for (HttpRoute route : routes) {
             httpMetricsTracker.add(route, apacheHttpClientConnectionManager);

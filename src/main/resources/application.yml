@@ -4,23 +4,16 @@ features:
 
 ---
 
+spring.profiles.active: prod
+
 server:
   port: 8080
-  servlet:
-    context-path: /dbo
-
-spring:
-  profiles:
-    active: prod
+  servlet.context-path: /dbo
 
 management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    shutdown:
-      enabled: true
+  metrics.enable.all: true
+  endpoints.web.exposure.include: '*'
+  endpoint.shutdown.enabled: true
 
 httpPool:
   maxTotal: 100
@@ -34,13 +27,11 @@ httpPool:
 
 spring:
   profiles: test
-  main:
-    lazy-initialization: true
-  autoconfigure:
-    exclude:
-      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
-      - org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
-      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+  main.lazy-initialization: true
+  autoconfigure.exclude:
+    - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+    - org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+    - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
 
 ---
 
@@ -49,8 +40,7 @@ spring:
   integration.legacyAccountingSystem:
     baseUrl: "http://localhost:8888/api"
     accountsEndpoint: "/account"
-  main:
-    lazy-initialization: true
+  main.lazy-initialization: true
   datasource:
     driverClassName: org.apache.derby.jdbc.EmbeddedDriver
     url: jdbc:derby:memory:dbo-db;create=true
@@ -62,8 +52,7 @@ spring:
       minimumIdle: 1
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: validate
+    hibernate.ddl-auto: validate
   liquibase: #https://javadeveloperzone.com/spring-boot/spring-boot-liquibase-example/
     enabled: true
     contexts: prod, qa
@@ -91,8 +80,7 @@ spring:
       idleTimeout: 600000
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: validate
+    hibernate.ddl-auto: validate
   liquibase:
     enabled: true
     contexts: prod, qa
@@ -122,9 +110,7 @@ spring:
       maximumPoolSize: 10
       minimumIdle: 2
       idleTimeout: 1800000
-  jpa:
-    hibernate:
-      ddl-auto: validate
+  jpa.hibernate.ddl-auto: validate
   liquibase:
     enabled: true
     contexts: prod

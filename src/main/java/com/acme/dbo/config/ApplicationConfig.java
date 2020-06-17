@@ -8,10 +8,12 @@ import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.*;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
@@ -26,15 +28,21 @@ import static lombok.AccessLevel.PUBLIC;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 @Slf4j
 public class ApplicationConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
-    public void configureJackson(ObjectMapper jackson2ObjectMapper) {
-        //placeholder for future customizations
-    }
-
     @Override
     protected void configure(HttpSecurity security) throws Exception {
         security.cors().disable().csrf().disable();
         security.httpBasic().disable();
+    }
+
+    @Autowired
+    public void configureJacksonMapper(ObjectMapper jackson2ObjectMapper) {
+        //placeholder for future customizations
+    }
+
+    @Bean
+    public RestTemplate simplePrototypedRestTemplate(RestTemplateBuilder builder) {
+        log.debug("simplePrototypedRestTemplate built");
+        return builder.build();
     }
 
     @Bean

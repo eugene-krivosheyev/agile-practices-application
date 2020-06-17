@@ -38,6 +38,9 @@ spring:
 
 spring:
   profiles: it
+  integration.legacyAccountingSystem:
+    baseUrl: "http://localhost:8888/api"
+    accountsEndpoint: "/account"
   main:
     lazy-initialization: true
   datasource:
@@ -65,6 +68,9 @@ spring:
 
 spring:
   profiles: qa
+  integration.legacyAccountingSystem:
+    baseUrl: "http://localhost:8888/api"
+    accountsEndpoint: "/account"
   datasource:
     driverClassName: org.apache.derby.jdbc.EmbeddedDriver
     url: jdbc:derby:dbo-db;create=true
@@ -93,6 +99,9 @@ spring:
 
 spring:
   profiles: prod
+  integration.legacyAccountingSystem:
+    baseUrl: "http://localhost:8888/api"
+    accountsEndpoint: "/account"
   datasource:
     platform: postgres #In order to run schema-postgres.sql before Liquibase
     driverClassName: org.postgresql.Driver

@@ -1,0 +1,25 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/account"
+  },
+  "response": {
+    "fixedDelayMilliseconds": "1000",
+    "status": "200",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": [
+      {
+      "id": "-1",
+      "amount": "100",
+      "clientId": "-1"
+      },
+      {
+        "id": "-2",
+        "amount": "200",
+        "clientId": "-2"
+      }
+    ]
+  }
+}

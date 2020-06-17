@@ -11,6 +11,12 @@ java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.0-SNAPSHOT.jar --
 ```
 - http://localhost:8080/dbo/swagger-ui.html
 
+# Run Legacy system *stub* while QA
+```shell script
+cd target/test-classes # cat mappings/legacyAccountingSystemResponse.json
+java -jar wiremock-jre8-standalone-2.26.3.jar --verbose --port 8888 # curl localhost:8888/api/account
+``` 
+
 # Build and run Docker container for Application
 ```bash
 docker build -t acme/dbo:1.0-SNAPHOT-it .

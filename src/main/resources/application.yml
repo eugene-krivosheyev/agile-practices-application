@@ -22,6 +22,14 @@ management:
     shutdown:
       enabled: true
 
+httpPool:
+  maxTotal: 100
+  defaultMaxPerRoute: 10
+  connectTimeout: 5000
+  connectionRequestTimeout: 1000
+  socketTimeout: 65000
+  validateAfterInactivity: 2000
+
 ---
 
 spring:

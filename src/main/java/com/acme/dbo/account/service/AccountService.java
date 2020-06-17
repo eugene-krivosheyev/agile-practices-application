@@ -22,7 +22,7 @@ public class AccountService {
     @Value("${spring.integration.legacyAccountingSystem.accountsEndpoint}") String accountEndpoint;
 
     @Autowired AccountRepository accountRepository;
-    @Autowired @Qualifier("simplePrototypedRestTemplate") RestTemplate legacyAccountingSystemRestTemplate;
+    @Autowired RestTemplate legacyAccountingSystemRestTemplate;
 
 
     public Collection<Account> getAccounts() {

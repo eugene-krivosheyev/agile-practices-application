@@ -2,6 +2,7 @@ package com.acme.dbo.account.controller;
 
 import com.acme.dbo.account.domain.Account;
 import com.acme.dbo.account.service.AccountService;
+import io.micrometer.core.annotation.Timed;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;

@@ -9,6 +9,9 @@ spring.profiles.active: prod
 server:
   port: 8080
   servlet.context-path: /dbo
+  tomcat:
+    mbeanregistry.enabled: true
+    maxThreads: 100
 
 management:
   metrics.enable.all: true

@@ -12,28 +12,6 @@
 		<version>2.2.0.RELEASE</version>
 	</parent>
 
-	<distributionManagement>
-		<repository>
-			<id>dbo-artifacts-server</id>
-			<name>dbo-releases</name>
-			<!-- TODO Set Artifacts Server repository URL from http://84.201.134.115:8081/artifactory/webapp/#/home -> dbo -->
-			<url>http://84.201.134.115:8081/artifactory/dbo</url>
-		</repository>
-		<snapshotRepository>
-			<id>dbo-artifacts-server</id>
-			<name>dbo-snapshots</name>
-			<!-- TODO Set Artifacts Server repository URL from http://84.201.134.115:8081/artifactory/webapp/#/home -> dbo -->
-			<url>http://84.201.134.115:8081/artifactory/dbo</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<repositories>
-		<repository>
-			<id>jcenter</id> <!-- for JunitInsights dependency -->
-			<url>https://jcenter.bintray.com/</url>
-		</repository>
-	</repositories>
-
 	<properties>
 		<sonar.junit.reportPaths>target/surefire-reports,target/failsafe-reports</sonar.junit.reportPaths>
 	</properties>
@@ -143,8 +121,6 @@
 					<systemPropertyVariables>
 						<derby.stream.error.file>log/derby.log</derby.stream.error.file>
 						<junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>
-						<de.adesso.junitinsights.enabled>true</de.adesso.junitinsights.enabled>
-						<de.adesso.junitinsights.reportpath>target/junitinsights-reports/</de.adesso.junitinsights.reportpath>
 					</systemPropertyVariables>
 					<properties>
 						<configurationParameters> <!-- Due to use of @MockBean: https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#testcontext-parallel-test-execution -->
@@ -262,8 +238,6 @@
 					<systemPropertyVariables>
 						<derby.stream.error.file>log/derby.log</derby.stream.error.file>
 						<junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>
-						<de.adesso.junitinsights.enabled>true</de.adesso.junitinsights.enabled>
-						<de.adesso.junitinsights.reportpath>target/junitinsights-reports/</de.adesso.junitinsights.reportpath>
 					</systemPropertyVariables>
 					<reportsDirectory>target/failsafe-reports</reportsDirectory>
 				</configuration>
@@ -399,12 +373,6 @@
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>de.adesso</groupId>
-			<artifactId>junit-insights</artifactId>
-			<version>1.1.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

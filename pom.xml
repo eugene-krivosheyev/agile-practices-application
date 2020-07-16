@@ -12,20 +12,20 @@
 		<version>2.2.0.RELEASE</version>
 	</parent>
 
+	<!-- TODO Set Artifactory Server for *installing* this POM's artifact
 	<distributionManagement>
 		<repository>
 			<id>dbo-artifacts-server</id>
 			<name>dbo-releases</name>
-			<!-- TODO Set Artifacts Server repository URL from http://84.201.134.115:8081/artifactory/webapp/#/home -> dbo -->
-			<url>http://84.201.134.115:8081/artifactory/dbo</url>
+			<url>http://{{ artifactory_host }}:{{ artifactory_port }}/artifactory/dbo</url>
 		</repository>
 		<snapshotRepository>
 			<id>dbo-artifacts-server</id>
 			<name>dbo-snapshots</name>
-			<!-- TODO Set Artifacts Server repository URL from http://84.201.134.115:8081/artifactory/webapp/#/home -> dbo -->
-			<url>http://84.201.134.115:8081/artifactory/dbo</url>
+			<url>http://{{ artifactory_host }}:{{ artifactory_port }}/artifactory/dbo</url>
 		</snapshotRepository>
 	</distributionManagement>
+	-->
 
 	<repositories>
 		<repository>

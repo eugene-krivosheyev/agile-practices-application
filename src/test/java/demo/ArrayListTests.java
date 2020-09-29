@@ -2,6 +2,7 @@ package demo;
 
 import com.acme.dbo.client.domain.Client;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.*;
 
 
 public class ArrayListTests {
@@ -35,7 +37,7 @@ public class ArrayListTests {
 
         //region Assert | Then
         assertEquals("", 1, sut.size());
-        assertTrue(sut.contains(dummy));
+        assertTrue(sut.contains(dummy)); //sut.data[-3].contains()
 
 //        assertMyCustom();
         assertThat(sut)
@@ -67,5 +69,27 @@ public class ArrayListTests {
         sut.add(null);
         assertEquals(1, sut.size());
         assertTrue(sut.contains(null));
+    }
+
+    @Test
+    public void shouldUseElementsStringRepresentationWhenToString1() {
+        Object elementStub = mock(Object.class);
+        when(elementStub.toString()).thenReturn("element string repersenation");
+        sut.add(elementStub);
+        assertThat(sut.toString())
+                .contains("element string repersenation");
+    }
+
+    @Test
+    @Ignore
+    public void shouldUseElementsStringRepresentationWhenToString2() {
+        final Object mockObject = mock(Object.class);
+        sut.add(mockObject);
+
+        sut.toString();
+
+        verify(mockObject, atLeastOnce()).toString();
+//                .toString(any())
+//                .toString(5555);
     }
 }

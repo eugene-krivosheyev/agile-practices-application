@@ -1,5 +1,6 @@
 package demo;
 
+import com.acme.dbo.client.domain.Client;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -46,6 +47,23 @@ public class ArrayListTests {
 
     @Test
     public void shouldSizeIncrementedAndContainsElementWhenNullElementAdded() {
+        /*
+        Client client =
+            ClientBuilder
+            StubClientBuilder
+            DBClientBuilder
+                .withId(1)
+                .withName("Patya")
+                //.withSalary(100)
+                .withAccount(1, USD, 100.)
+                .withAccount(
+                        AccountBuilder
+                            .withId(1)
+                            .withAmount(100.)
+                        .build()
+                ).build();
+                */
+
         sut.add(null);
         assertEquals(1, sut.size());
         assertTrue(sut.contains(null));

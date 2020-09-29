@@ -1,15 +1,14 @@
 package demo;
 
-import com.gargoylesoftware.htmlunit.Cache;
-import org.hamcrest.CoreMatchers;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.Matchers.allOf;
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class ArrayListTests {
     private ArrayList<Object> sut;
@@ -37,10 +36,11 @@ public class ArrayListTests {
         assertEquals("", 1, sut.size());
         assertTrue(sut.contains(dummy));
 
-        assertThat(sut, allOf(
-                hasItem("null"),
-                nullValue()
-        ));
+//        assertMyCustom();
+        assertThat(sut)
+            .containsExactly(dummy)
+            .hasSize(1)
+            .isNotNull();
         //endregion
     }
 

@@ -1,7 +1,10 @@
 plugins {
 	id 'java'
+
 	id 'org.springframework.boot' version '2.4.0'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+
+	id 'jacoco'
 }
 
 group = 'com.acme.banking'
@@ -77,6 +80,12 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+	systemProperty 'de.adesso.junitinsights.enabled', 'true'
+	systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true'
+	jacoco {
+		destinationFile = file("$buildDir/reports/jacoco/jacoco-test.exec")
+	}
+
 }
 
 task integrationTest(type: Test) {
@@ -88,10 +97,24 @@ task integrationTest(type: Test) {
 	classpath = sourceSets.integrationTest.runtimeClasspath
 
 	useJUnitPlatform()
-
+	systemProperty 'de.adesso.junitinsights.enabled', 'true'
+	systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true'
 	reports {
 		html.enabled true
 		junitXml.enabled true
 	}
+	jacoco {
+		destinationFile = file("$buildDir/reports/jacoco/jacoco-integrationTest.exec")
+	}
 }
 check.dependsOn integrationTest
+
+jacocoTestReport {
+	dependsOn check
+	executionData tasks.withType(Test)
+	reports {
+		xml.enabled false
+		csv.enabled false
+		html.destination file("$buildDir/reports/jacoco/html")
+	}
+}

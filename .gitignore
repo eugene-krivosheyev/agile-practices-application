@@ -11,7 +11,12 @@ out/
 # Maven
 target/
 
+# Gradle
+.gradle/
+build/
+
 # Application
+*.log
 log/
 dbo-db/
 liquibase-rollback.sql

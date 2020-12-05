@@ -6,8 +6,7 @@
     <mirrors>
         <mirror>
             <id>dbo-artifacts-server</id>
-            <!-- TODO Set Artifacts Server repository URL from http://84.201.134.115:8081/artifactory/webapp/#/home -> dbo -->
-            <url>http://84.201.134.115:8081/artifactory/dbo</url>
+            <url><!-- TODO Set Corporate Artifacts Server repository URL, e.g. https://host:port/artifactory/repo-name --></url>
             <mirrorOf>central</mirrorOf>
         </mirror>
     </mirrors>
@@ -15,9 +14,9 @@
     <servers>
         <server>
             <id>dbo-artifacts-server</id>
-            <username>admin</username> <!-- TODO Set Artifacts Server login -->
-            <password>Ag1lePracticeS</password> <!-- TODO Set Artifacts Server password -->
-            <!-- To encrypt use https://maven.apache.org/guides/mini/guide-encryption.html -->
+            <username><!-- TODO Set Artifacts Server login --></username>
+            <password><!-- TODO Set Artifacts Server password --></password>
+            <!-- TODO Use https://maven.apache.org/guides/mini/guide-encryption.html for encrypt account password -->
         </server>
     </servers>
 </settings>

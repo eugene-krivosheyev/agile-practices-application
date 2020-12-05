@@ -4,6 +4,12 @@ sudo apt install openjdk-8-jdk-headless
 sudo apt install maven
 ```
 
+# Setup Maven configuration [in case of corporate Maven repo]
+```shell
+vi maven-settings.xml
+cp maven-settings.xml $M2_HOME/conf/settings.xml
+```
+
 # Build with Maven and Run raw release locally
 ```bash
 mvn verify -Djava.awt.headless=true -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback-quiet.xml

@@ -1,6 +1,6 @@
 package com.acme.dbo.it.client.uat;
 
-import com.acme.dbo.config.ScreenshotExceptionExtension;
+import com.acme.dbo.it.config.ScreenshotExceptionExtension;
 import com.acme.dbo.it.client.uat.page.MainPage;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;

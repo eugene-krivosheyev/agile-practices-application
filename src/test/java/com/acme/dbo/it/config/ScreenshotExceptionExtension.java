@@ -1,4 +1,4 @@
-package com.acme.dbo.config;
+package com.acme.dbo.it.config;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestExecutionExceptionHandler;

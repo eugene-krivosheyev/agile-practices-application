@@ -1,4 +1,4 @@
-package com.acme.dbo.config;
+package com.acme.dbo.it.config;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;

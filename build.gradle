@@ -1,7 +1,7 @@
 plugins {
+	id 'java'
 	id 'org.springframework.boot' version '2.4.0'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
-	id 'java'
 }
 
 group = 'com.acme.banking'
@@ -11,6 +11,27 @@ sourceCompatibility = '1.8'
 repositories {
 	mavenCentral()
 	jcenter()
+}
+
+sourceSets {
+	test {
+		java.srcDirs = ["src/test/java/com/acme/dbo/ut"]
+		resources.srcDirs = ["src/test/resources/com/acme/dbo/ut"]
+	}
+
+	integrationTest {
+		java.srcDirs = ["src/test/java/com/acme/dbo/it"]
+		resources.srcDirs = ["src/test/resources/com/acme/dbo/it"]
+		compileClasspath += sourceSets.main.output
+		runtimeClasspath += sourceSets.main.output
+	}
+}
+
+configurations {
+	integrationTestCompileOnly.extendsFrom testCompileOnly
+	integrationTestAnnotationProcessor.extendsFrom testAnnotationProcessor
+	integrationTestImplementation.extendsFrom testImplementation
+	integrationTestRuntimeOnly.extendsFrom testRuntimeOnly
 }
 
 dependencies {
@@ -31,25 +52,46 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 	implementation 'io.springfox:springfox-swagger2:2.9.2'
 
+
 	testCompileOnly 'org.projectlombok:lombok:1.18.2'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
 
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.0.RELEASE'
-	testImplementation 'org.seleniumhq.selenium:selenium-java:3.5.1'
-	testImplementation 'io.github.bonigarcia:webdrivermanager:3.8.1'
-	testImplementation 'com.codeborne:selenide:5.4.1'
-	testImplementation 'ru.yandex.qatools.htmlelements:htmlelements-java:1.20.0'
-	testImplementation 'io.cucumber:cucumber-spring:4.7.1'
-	testImplementation 'io.cucumber:cucumber-junit:4.7.1'
 	testImplementation 'de.adesso:junit-insights:1.1.0'
 
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.5.2'
-	testRuntimeOnly 'net.masterthought:cucumber-reporting:5.0.0'
-	testRuntimeOnly 'de.monochromata.cucumber:reporting-plugin:3.0.9'
+
+
+	integrationTestImplementation 'org.seleniumhq.selenium:selenium-java:3.5.1'
+	integrationTestImplementation 'io.github.bonigarcia:webdrivermanager:3.8.1'
+	integrationTestImplementation 'com.codeborne:selenide:5.4.1'
+	integrationTestImplementation 'ru.yandex.qatools.htmlelements:htmlelements-java:1.20.0'
+	integrationTestImplementation 'io.cucumber:cucumber-spring:4.7.1'
+	integrationTestImplementation 'io.cucumber:cucumber-junit:4.7.1'
+
+	integrationTestRuntimeOnly 'net.masterthought:cucumber-reporting:5.0.0'
+	integrationTestRuntimeOnly 'de.monochromata.cucumber:reporting-plugin:3.0.9'
 }
 
 test {
 	useJUnitPlatform()
 }
+
+task integrationTest(type: Test) {
+	description 'Runs integration tests.'
+	group 'verification'
+	shouldRunAfter test
+
+	testClassesDirs = sourceSets.integrationTest.output.classesDirs
+	classpath = sourceSets.integrationTest.runtimeClasspath
+
+	useJUnitPlatform()
+
+	reports {
+		html.enabled true
+		junitXml.enabled true
+	}
+}
+check.dependsOn integrationTest

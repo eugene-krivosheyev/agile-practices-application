@@ -7,7 +7,7 @@
         <mirror>
             <id>dbo-artifacts-server</id>
             <url><!-- TODO Set Corporate Artifacts Server repository URL, e.g. https://host:port/artifactory/repo-name --></url>
-            <mirrorOf>central</mirrorOf>
+            <mirrorOf>central,jcenter</mirrorOf>
         </mirror>
     </mirrors>
 

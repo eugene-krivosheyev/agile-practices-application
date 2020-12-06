@@ -5,7 +5,7 @@ features:
 ---
 
 spring:
-  profiles.active: prod
+  profiles.active: qa
   jpa.properties.hibernate.generate_statistics: true
 
 server:
@@ -95,6 +95,35 @@ spring:
     liquibaseSchema: liquibase
     user: APP
     password: APP
+    rollback-file: liquibase-rollback.sql
+    test-rollback-on-update: true
+
+---
+
+spring:
+  profiles: preprod
+  integration.legacyAccountingSystem:
+    baseUrl: "http://localhost:8888/api"
+    accountsEndpoint: "/account"
+  datasource:
+    platform: postgres #In order to run schema-postgres.sql before Liquibase
+    url: jdbc:tc:postgresql:10-alpine:///dbo-db?TC_TMPFS=/testtmpfs:rw&TC_DAEMON=true
+    username: dbo
+    password: P@ssw0rd
+    initialization-mode: always
+    hikari:
+      poolName: hikari-connection-pool
+      maximumPoolSize: 10
+      minimumIdle: 2
+      idleTimeout: 1800000
+  jpa.hibernate.ddl-auto: validate
+  liquibase:
+    enabled: true
+    contexts: prod, qa
+    change-log: classpath:/db-changelog.xml
+    liquibaseSchema: liquibase
+    user: dbo
+    password: P@ssw0rd
     rollback-file: liquibase-rollback.sql
     test-rollback-on-update: true
 

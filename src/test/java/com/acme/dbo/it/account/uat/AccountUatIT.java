@@ -1,4 +1,4 @@
-package com.acme.dbo.it.account;
+package com.acme.dbo.it.account.uat;
 
 import com.acme.dbo.it.config.ScreenshotExceptionExtension;
 import com.codeborne.selenide.Selectors;

@@ -56,9 +56,14 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 	implementation 'io.springfox:springfox-swagger2:2.9.2'
 
+	runtimeOnly 'org.postgresql:postgresql:42.2.18'
 
 	testCompileOnly 'org.projectlombok:lombok:1.18.2'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
+
+	testImplementation "org.testcontainers:testcontainers:1.15.0"
+	testImplementation "org.testcontainers:junit-jupiter:1.15.0"
+	testImplementation "org.testcontainers:postgresql:1.15.0"
 
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.0.RELEASE'
@@ -67,7 +72,6 @@ dependencies {
 
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.5.2'
-
 
 	integrationTestImplementation 'org.seleniumhq.selenium:selenium-java:3.5.1'
 	integrationTestImplementation 'io.github.bonigarcia:webdrivermanager:3.8.1'
@@ -82,7 +86,7 @@ dependencies {
 
 test {
 	String includedGroups = System.getProperty("groups") ? System.getProperty("groups") : ''
-	String excludedGroups = System.getProperty("excludedGroups") ? System.getProperty("excludedGroups") : 'selenium'
+	String excludedGroups = System.getProperty("excludedGroups") ? System.getProperty("excludedGroups") : 'nope'
 	useJUnitPlatform {
 		if(includedGroups != '') includeTags includedGroups
 		excludeTags excludedGroups
@@ -108,7 +112,7 @@ task integrationTest(type: Test) {
 	classpath = sourceSets.integrationTest.runtimeClasspath
 
 	String includedGroups = System.getProperty("groups") ? System.getProperty("groups") : ''
-	String excludedGroups = System.getProperty("excludedGroups") ? System.getProperty("excludedGroups") : 'selenium'
+	String excludedGroups = System.getProperty("excludedGroups") ? System.getProperty("excludedGroups") : 'selenium | docker'
 	useJUnitPlatform() {
 		if(includedGroups != '') includeTags includedGroups
 		excludeTags excludedGroups

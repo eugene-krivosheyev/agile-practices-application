@@ -15,6 +15,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.DisabledIf;
 
+import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
@@ -32,6 +33,12 @@ public class AccountControllerComponentIT {
     @Autowired AccountController sut;
     @MockBean AccountService accountServiceMock;
     @Mock Account accountStub;
+
+    @Test
+    public void shouldNotGetAccountsWhenMockedDbIsEmpty() {
+        given(accountServiceMock.getAccounts()).willReturn(emptyList());
+        assertThat(sut.getAccounts()).isEmpty();
+    }
 
     @Test
     public void shouldGetAccountWhenMockedDbHasOne() {

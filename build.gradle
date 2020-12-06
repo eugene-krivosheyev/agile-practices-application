@@ -62,6 +62,7 @@ dependencies {
 
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.0.RELEASE'
+	testImplementation 'org.assertj:assertj-core:3.18.1'
 	testImplementation 'de.adesso:junit-insights:1.1.0'
 
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
@@ -87,8 +88,9 @@ test {
 		excludeTags excludedGroups
 	}
 
-	maxHeapSize '1G'
-	maxParallelForks 4
+	maxHeapSize '2G'
+	maxParallelForks Runtime.runtime.availableProcessors()
+	forkEvery 100
 
 	systemProperty 'de.adesso.junitinsights.enabled', 'true'
 	systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true'
@@ -112,8 +114,9 @@ task integrationTest(type: Test) {
 		excludeTags excludedGroups
 	}
 
-	maxHeapSize '1G'
-	maxParallelForks 4
+	maxHeapSize '2G'
+	maxParallelForks Runtime.runtime.availableProcessors()
+	forkEvery 100
 
 	systemProperty 'de.adesso.junitinsights.enabled', 'true'
 	systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true'

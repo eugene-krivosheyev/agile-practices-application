@@ -12,27 +12,27 @@ cp maven-settings.xml $M2_HOME/conf/settings.xml
 
 # Build with Maven
 ```shell
-mvn clean verify -Djava.awt.headless=true -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback-quiet.xml [-DexcludedGroups="selenium" -Dgroups=""]
+mvn clean verify -Djava.awt.headless=true -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback-quiet.xml [-DexcludedGroups="nope" -Dgroups=""]
 ```
 
 # Build with Gradle
 ```shell
-gradle clean check bootJar [jacocoTestReport pitest -i --scan --no-build-cache -DexcludedGroups='nope']
+gradle clean check bootJar [jacocoTestReport pitest -i --scan --no-build-cache -DexcludedGroups='nope' -Dgroups=""]
 ```
 
 # Run raw release locally
 ```shell
-java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.0-SNAPSHOT.jar --spring.profiles.active=qa
+java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.0-SNAPSHOT.jar [--spring.profiles.active=qa]
 ```
 - http://localhost:8080/dbo/swagger-ui.html
 
-# Run Legacy system *stub* while QA
+# Optional run legacy system *stub* while QA
 ```shell script
 cd target/test-classes # cat mappings/legacyAccountingSystemResponse.json
 java -jar wiremock-jre8-standalone-2.26.3.jar --verbose --port 8888 # curl localhost:8888/api/account
 ``` 
 
-# Build and run Docker container for Application
+# Optional build and run Docker container for Application
 ```bash
 docker build -t acme/dbo:1.0-SNAPHOT-it .
 

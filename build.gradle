@@ -5,7 +5,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 
 	id 'jacoco'
-	id 'info.solidsoft.pitest' version '1.5.1'
+	id 'info.solidsoft.pitest' version '1.5.2'
 }
 
 group = 'com.acme.dbo'
@@ -148,7 +148,7 @@ jacocoTestReport {
 
 pitest {
 	junit5PluginVersion = '0.12'
-	testSourceSets = [sourceSets.test, sourceSets.integrationTest]
+	testSourceSets = [sourceSets.test] //TODO add sourceSets.integrationTest but Selenuim and Docker tests break PIT
 
 	threads = 4
 	outputFormats = ['XML', 'HTML']

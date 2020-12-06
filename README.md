@@ -12,12 +12,12 @@ cp maven-settings.xml $M2_HOME/conf/settings.xml
 
 # Build with Maven
 ```shell
-mvn verify -Djava.awt.headless=true -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback-quiet.xml
+mvn clean verify -Djava.awt.headless=true -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback-quiet.xml [-DexcludedGroups="selenium" -Dgroups=""]
 ```
 
 # Build with Gradle
 ```shell
-gradle clean check bootJar [jacocoTestReport pitest --scan]
+gradle clean check bootJar [jacocoTestReport pitest -i --scan --no-build-cache -DexcludedGroups='nope']
 ```
 
 # Run raw release locally

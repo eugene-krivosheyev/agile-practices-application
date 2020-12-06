@@ -259,6 +259,7 @@
 						<include>**/*IT.java</include>
 						<include>**/*ST.java</include>
 					</includes>
+					<excludedGroups>selenium</excludedGroups>
 					<systemPropertyVariables>
 						<derby.stream.error.file>log/derby.log</derby.stream.error.file>
 						<junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>

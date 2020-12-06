@@ -4,10 +4,7 @@ import com.acme.dbo.it.config.ScreenshotExceptionExtension;
 import com.acme.dbo.it.client.uat.page.MainPage;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ActiveProfiles("it")
 @Slf4j
 @FieldDefaults(level = PRIVATE)
-
-@Disabled
+@Tag("selenium")
 public class ClientUatIT {
     @LocalServerPort int serverPort;
     @Autowired WebDriver driver;

@@ -28,8 +28,7 @@ import static org.openqa.selenium.By.linkText;
 @ActiveProfiles("it")
 @Slf4j
 @FieldDefaults(level = PRIVATE)
-
-@Disabled
+@Tag("selenium")
 public class AccountUatIT {
     @LocalServerPort int serverPort;
     @Autowired WebDriver driver;

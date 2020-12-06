@@ -80,13 +80,21 @@ dependencies {
 }
 
 test {
-	useJUnitPlatform()
+	String includedGroups = System.getProperty("groups") ? System.getProperty("groups") : ''
+	String excludedGroups = System.getProperty("excludedGroups") ? System.getProperty("excludedGroups") : 'selenium'
+	useJUnitPlatform {
+		if(includedGroups != '') includeTags includedGroups
+		excludeTags excludedGroups
+	}
+
+	maxHeapSize '1G'
+	maxParallelForks 4
+
 	systemProperty 'de.adesso.junitinsights.enabled', 'true'
 	systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true'
 	jacoco {
 		destinationFile = file("$buildDir/reports/jacoco/jacoco-test.exec")
 	}
-
 }
 
 task integrationTest(type: Test) {
@@ -97,13 +105,24 @@ task integrationTest(type: Test) {
 	testClassesDirs = sourceSets.integrationTest.output.classesDirs
 	classpath = sourceSets.integrationTest.runtimeClasspath
 
-	useJUnitPlatform()
+	String includedGroups = System.getProperty("groups") ? System.getProperty("groups") : ''
+	String excludedGroups = System.getProperty("excludedGroups") ? System.getProperty("excludedGroups") : 'selenium'
+	useJUnitPlatform() {
+		if(includedGroups != '') includeTags includedGroups
+		excludeTags excludedGroups
+	}
+
+	maxHeapSize '1G'
+	maxParallelForks 4
+
 	systemProperty 'de.adesso.junitinsights.enabled', 'true'
 	systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true'
+
 	reports {
 		html.enabled true
 		junitXml.enabled true
 	}
+
 	jacoco {
 		destinationFile = file("$buildDir/reports/jacoco/jacoco-integrationTest.exec")
 	}

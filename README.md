@@ -1,5 +1,5 @@
 # Install environment
-```bash
+```shell
 sudo apt install openjdk-8-jdk-headless
 sudo apt install maven
 ```
@@ -10,9 +10,18 @@ vi maven-settings.xml
 cp maven-settings.xml $M2_HOME/conf/settings.xml
 ```
 
-# Build with Maven and Run raw release locally
-```bash
+# Build with Maven
+```shell
 mvn verify -Djava.awt.headless=true -DdependencyLocationsEnabled=false -Dlogback.configurationFile=logback-quiet.xml
+```
+
+# Build with Gradle
+```shell
+gradle clean check bootJar [jacocoTestReport pitest --scan]
+```
+
+# Run raw release locally
+```shell
 java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.0-SNAPSHOT.jar --spring.profiles.active=qa
 ```
 - http://localhost:8080/dbo/swagger-ui.html

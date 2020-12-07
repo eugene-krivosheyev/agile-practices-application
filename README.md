@@ -1,3 +1,56 @@
+# Application architecture
+![structure](https://www.planttext.com/api/plantuml/svg/VPBBRiCW44NtVCL8MJjV47cHP5KrKffKtLXUO3nnK6r06AMoglnxmGyUhbg91RgScRbSk6dQ8Toq50P5JPODP3aOsJ5g2AcfeHNj4Ovxs7pTkS4WdTuMYSbEIO72m2isb0qNxCqLzOCpN13RtGshAFjq8xu9mAHCaqO183GghafpqPm-3kNImW5JJJ-UpJL9bPlyZfrggS6aCA5U53rh-U0rwd-Wkc9_j9fSKALQRhrpARoLbHabUswa7ahOxPYiiK61TPx3fkNDtJIQ3hwkEDZqjMnRvyc-G347M0PYKSRZgBadWWQPPQ9hUYJI9YQwfOVyPdb4HyRHHXE3w6pzUl-PV9AaCmbQb9TDG21pUPwbR9FCOvkZcvGTcLHoRevxugVDVsQx7MldfDSdiUb83hckJzA8tOtich-qDU0_iLNz7hB4mfFy0000)
+<details>
+<summary>puml</summary>
+
+```puml
+@startuml
+
+frame frontend
+frontend -> tomcat
+
+database DB #white
+database MQ #white
+component LegacyRestService #white
+
+frame backend {
+  frame tomcat {
+    component [SpringMVC] #white
+    frame spring {
+      component [RestTemplate] #white
+      component [JpaProvider] #white
+      component [JdbcTemplate] #white
+      frame application {
+        component [Repository] <<codegened>> #lightgray
+        [Controller] -> [Service]
+        [Service] -> [Repository]
+        Repository --> JpaProvider
+        JpaProvider --> JdbcTemplate
+        
+        Service --> RestTemplate
+        RestTemplate -> LegacyRestService
+      }
+      
+      
+    }
+    component [ConnectionPool] #white
+    JdbcTemplate --> ConnectionPool
+    ConnectionPool -> DB
+    
+    spring ..> Controller
+    spring ..> Service
+    spring ..> Repository
+    spring ..> JpaProvider
+  }
+  
+  tomcat -> SpringMVC
+  SpringMVC -> Controller
+}
+
+@enduml
+```
+</details>
+
 # Install environment
 ```shell
 sudo apt install openjdk-8-jdk-headless

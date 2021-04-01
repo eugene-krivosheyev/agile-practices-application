@@ -1,4 +1,4 @@
-FROM fabric8/java-alpine-openjdk8-jre:1.6.3
+FROM adoptopenjdk/openjdk8:alpine-jre
 EXPOSE 8080
 RUN mkdir -p /dbo
 WORKDIR /dbo

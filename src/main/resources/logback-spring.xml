@@ -51,6 +51,39 @@
         <logger name="org.hibernate.stat" level="DEBUG" />
     </springProfile>
 
+    <springProfile name="preprod">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%date{ISO8601} %level %thread %logger{20} %file:%line - %msg%n</pattern>
+            </encoder>
+            <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+                <level>WARN</level>
+            </filter>
+        </appender>
+
+        <appender name="ROLLING-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>log/dbo.log</file>
+
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>log/dbo-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+                <maxFileSize>1MB</maxFileSize>
+                <maxHistory>30</maxHistory> <!-- days -->
+                <totalSizeCap>100Mb</totalSizeCap>
+            </rollingPolicy>
+
+            <append>true</append>
+            <immediateFlush>false</immediateFlush>
+            <encoder>
+                <pattern>%date{ISO8601} %level %thread %logger{20} %file:%line - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <root level="WARN">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="ROLLING-FILE"/>
+        </root>
+        <logger name="com.acme.dbo" level="INFO" />  <!-- Business events -->
+    </springProfile>
 
     <springProfile name="prod">
         <appender name="ROLLING-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">

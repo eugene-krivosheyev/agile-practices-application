@@ -76,7 +76,7 @@ gradle clean check bootJar [jacocoTestReport pitest -i --scan --no-build-cache -
 
 # Run raw release locally
 ```shell
-java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.0-SNAPSHOT.jar [--spring.profiles.active=qa]
+java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.0-SNAPSHOT.jar --spring.profiles.active=qa
 ```
 - http://localhost:8080/dbo/swagger-ui.html
 

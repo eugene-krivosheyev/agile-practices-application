@@ -33,7 +33,7 @@ public class AccountService {
             log.debug("Requesting legacy accounting system");
             accountsFromLegacyAccountingSystem = legacyAccountingSystemRestTemplate.getForObject(legacyAccountingSystemAccountEndpoint, Account[].class);
         } catch (Exception e) {
-            log.error("Legacy accounting system failed to respond for 'GET /api/account'. But it's main flow and totally Ok.", e);
+            log.warn("Legacy accounting system failed to respond for 'GET /api/account'. But it's main flow and totally Ok.", e);
             //but even so we must handle request anyway even with new data only
         }
 

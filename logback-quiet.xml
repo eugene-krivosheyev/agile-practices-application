@@ -1,9 +1,0 @@
-<!--
-Stub logback config to make Maven build less verbose.
-Make run configuration in IDEA:
-```
-mvn clean verify -Dlogback.configurationFile=logback-quiet.xml
-```
-Spring will use logback-spring.xml anyway.
--->
-<configuration/>

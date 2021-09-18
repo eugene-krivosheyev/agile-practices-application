@@ -298,6 +298,27 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>com.googlecode.maven-download-plugin</groupId>
+				<artifactId>download-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<executions>
+					<execution>
+						<id>download-derby</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>wget</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<url>https://archive.apache.org/dist/db/derby/db-derby-10.13.1.1/db-derby-10.13.1.1-bin.zip</url>
+					<unpack>true</unpack>
+					<outputDirectory>${project.build.directory}</outputDirectory>
+					<md5>cb0a722de0b8a26d57f7309c4e2a9a01</md5>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -402,6 +423,11 @@
 		<dependency>
 			<groupId>org.apache.derby</groupId>
 			<artifactId>derby</artifactId>
+			<version>10.13.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derbyclient</artifactId>
 			<version>10.13.1.1</version>
 		</dependency>
 		<dependency>

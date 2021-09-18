@@ -64,11 +64,17 @@ mvn clean verify [-DexcludedGroups="nope" -Dgroups=""]
 gradle clean check bootJar [jacocoTestReport pitest -i --scan --no-build-cache -DexcludedGroups='nope' -Dgroups=""]
 ```
 
-# Run raw release locally
+# Run app with embedded DB
 ```shell
 java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.0-SNAPSHOT.jar --spring.profiles.active=qa
 ```
 open [http://localhost:8080/dbo/swagger-ui/](http://localhost:8080/dbo/swagger-ui/)
+
+# Run app with stand-alone server DB
+```shell
+target/db-derby-10.13.1.1-bin/bin/startNetworkServer &
+java -jar target/dbo-1.0-SNAPSHOT.jar --spring.profiles.active=qa2
+```
 
 # Run legacy system *stub* while QA [optional]
 ```shell script
@@ -83,12 +89,11 @@ docker build -t acme/dbo:1.0-SNAPHOT-it .
 docker run -d -p 8080:8080 --name dbo acme/dbo:1.0-SNAPHOT-it
 docker exec -it dbo /bin/sh
 ```
-
 ```bash
 docker rm dbo -f
 ```
 
-# Graceful shutdown
+# Application graceful shutdown
 ```
 curl --request POST http://localhost:8080/dbo/actuator/shutdown
 ```

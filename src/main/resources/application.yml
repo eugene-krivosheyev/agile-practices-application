@@ -101,6 +101,36 @@ spring:
 ---
 
 spring:
+  config.activate.on-profile: qa2
+  integration.legacyAccountingSystem:
+    baseUrl: "http://localhost:8888/api"
+    accountsEndpoint: "/account"
+  datasource:
+    driverClassName: org.apache.derby.jdbc.ClientDriver
+    url: jdbc:derby://localhost/dbo-db;create=true
+    username: APP
+    password: APP
+    hikari:
+      poolName: hikari-connection-pool
+      maximumPoolSize: 5
+      minimumIdle: 1
+      idleTimeout: 600000
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: validate
+  liquibase:
+    enabled: true
+    contexts: prod, qa
+    change-log: classpath:/db-changelog.xml
+    liquibaseSchema: liquibase
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    rollback-file: liquibase-rollback.sql
+    test-rollback-on-update: true
+
+---
+
+spring:
   config.activate.on-profile: preprod
   integration.legacyAccountingSystem:
     baseUrl: #should by externalized

@@ -50,7 +50,7 @@ public class TestConfig {
 
         //region Selenide setup
         WebDriverRunner.setWebDriver(driver);
-        Configuration.timeout = 5_000;
+        Configuration.timeout = 10_000;
         Configuration.reportsFolder = "target/surefire-reports";
         //endregion
 

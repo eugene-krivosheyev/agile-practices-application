@@ -6,6 +6,7 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ActiveProfiles;
@@ -20,7 +21,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @DisabledIf(expression = "#{environment['features.client'] == 'false'}", loadContext = true)
 @SpringBootTest(properties = {
         "spring.datasource.driverClassName=org.testcontainers.jdbc.ContainerDatabaseDriver",
-        "spring.datasource.url=jdbc:tc:postgresql:10-alpine:///dbo-db?TC_TMPFS=/testtmpfs:rw&TC_DAEMON=true"
+        "spring.datasource.url=jdbc:tc:postgresql:10-alpine:///dbo-db?TC_TMPFS=/testtmpfs:rw&TC_DAEMON=true&TC_INITSCRIPT=schema-postgres.sql"
 })
 @ActiveProfiles("preprod")
 @Slf4j
@@ -32,7 +33,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class ClientControllerIT {
     @Autowired ClientController sut;
 
-    // no need to create and init this container, @Testcontainers extension will make it based on connection string config at application.yml
+    // no need to create and init this container, @Testcontainers extension will make it based on connection string config from properties
     // @Container PostgreSQLContainer<?> pgFake = new PostgreSQLContainer<>("postgres:10-alpine").withDatabaseName("dbo-db").withUsername("dbo").withPassword("P@ssw0rd");
 
     @Test

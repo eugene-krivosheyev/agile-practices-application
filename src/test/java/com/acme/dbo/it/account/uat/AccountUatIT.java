@@ -36,7 +36,7 @@ public class AccountUatIT {
 
     @BeforeAll
     public void setUp() {
-        mainPage = "http://localhost:" + serverPort + "/dbo/swagger-ui.html";
+        mainPage = "http://localhost:" + serverPort + "/dbo/swagger-ui/";
 
         open(mainPage);
         $(byClassName("main")).shouldBe(visible)
@@ -51,7 +51,7 @@ public class AccountUatIT {
     @Test
     public void shouldGetAccountsWhenPrepopulatedDbHasSome() {
         $(linkText("account-controller")).shouldBe(visible).click();
-        $(linkText("/api/account")).shouldBe(visible).click();
+        $(linkText("/dbo/api/account")).shouldBe(visible).click();
         $(withText("Try it out")).shouldBe(visible).click();
         $(withText("Execute")).shouldBe(visible).click();
         $(withText("Server response")).shouldBe(visible);

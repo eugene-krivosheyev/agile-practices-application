@@ -12,9 +12,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.google.common.base.Predicates.not;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
+import static java.util.function.Predicate.not;
 import static springfox.documentation.builders.RequestHandlerSelectors.basePackage;
 
 @Configuration

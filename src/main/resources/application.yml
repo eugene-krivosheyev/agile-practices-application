@@ -13,7 +13,7 @@ server:
   servlet.context-path: /dbo
   tomcat:
     mbeanregistry.enabled: true
-    maxThreads: 100
+    threads.max: 100
 
 management:
   metrics:
@@ -33,7 +33,7 @@ httpPool:
 ---
 
 spring:
-  profiles: test
+  config.activate.on-profile: test
   main.lazy-initialization: true
   autoconfigure.exclude:
     - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
@@ -43,7 +43,7 @@ spring:
 ---
 
 spring:
-  profiles: it
+  config.activate.on-profile: it
   integration.legacyAccountingSystem:
     baseUrl: "http://localhost:8888/api"
     accountsEndpoint: "/account"
@@ -71,7 +71,7 @@ spring:
 ---
 
 spring:
-  profiles: qa
+  config.activate.on-profile: qa
   integration.legacyAccountingSystem:
     baseUrl: "http://localhost:8888/api"
     accountsEndpoint: "/account"
@@ -101,17 +101,18 @@ spring:
 ---
 
 spring:
-  profiles: preprod
+  config.activate.on-profile: preprod
   integration.legacyAccountingSystem:
     baseUrl: #should by externalized
     accountsEndpoint: "/account"
+  sql.init:
+    platform: postgres
+    mode: always
   datasource:
-    platform: postgres #In order to run schema-postgres.sql before Liquibase
     driverClassName: org.postgresql.Driver
     url:  #should by externalized
     username: #should by externalized
     password: #should by externalized
-    initialization-mode: always
     hikari:
       poolName: hikari-connection-pool
       maximumPoolSize: 10
@@ -131,17 +132,18 @@ spring:
 ---
 
 spring:
-  profiles: prod
+  config.activate.on-profile: prod
   integration.legacyAccountingSystem:
     baseUrl: "http://localhost:8888/api"
     accountsEndpoint: "/account"
+  sql.init:
+    platform: postgres
+    mode: always
   datasource:
-    platform: postgres #In order to run schema-postgres.sql before Liquibase
     driverClassName: org.postgresql.Driver
     url: #should by externalized
     username: #should by externalized
     password: #should by externalized
-    initialization-mode: always
     hikari:
       poolName: hikari-connection-pool
       maximumPoolSize: 10

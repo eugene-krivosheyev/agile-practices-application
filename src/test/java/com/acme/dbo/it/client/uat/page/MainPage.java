@@ -7,8 +7,7 @@ import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static org.openqa.selenium.By.className;
-import static org.openqa.selenium.By.id;
+import static org.openqa.selenium.By.*;
 
 public class MainPage {
     private WebDriver driver;
@@ -19,7 +18,7 @@ public class MainPage {
 
     public MainPage(WebDriver driver, int serverPort) {
         this.driver = driver;
-        this.mainPageUrl = "http://localhost:" + serverPort + "/dbo/swagger-ui.html";
+        this.mainPageUrl = "http://localhost:" + serverPort + "/dbo/swagger-ui/";
 
         driver.get(mainPageUrl);
         $(className("models")).shouldBe(visible)
@@ -30,7 +29,7 @@ public class MainPage {
 
     public ClientControllerBlock expandClientController() {
         $(id("operations-tag-client-controller")).click();
-        $(byText("/api/client")).shouldBe(visible);
+        $(linkText("/dbo/api/client")).shouldBe(visible);
         return clientControllerBlock;
     }
 }

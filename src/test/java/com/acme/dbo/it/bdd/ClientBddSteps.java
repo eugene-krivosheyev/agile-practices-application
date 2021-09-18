@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.spring.CucumberContextConfiguration;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @DisabledIf(expression = "#{environment['features.client'] == 'false'}", loadContext = true)
 @SpringBootTest
+@CucumberContextConfiguration
 @AutoConfigureMockMvc
 @ActiveProfiles("it")
 @Slf4j

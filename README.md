@@ -66,14 +66,14 @@ gradle clean check bootJar [jacocoTestReport pitest -i --scan --no-build-cache -
 
 # Run app with embedded DB
 ```shell
-java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.0-SNAPSHOT.jar --spring.profiles.active=qa
+java -Dderby.stream.error.file=log/derby.log -jar target/dbo-1.x.x.jar --spring.profiles.active=qa
 ```
 open [http://localhost:8080/dbo/swagger-ui/](http://localhost:8080/dbo/swagger-ui/)
 
 # Run app with stand-alone server DB
 ```shell
 target/db-derby-10.13.1.1-bin/bin/startNetworkServer &
-java -jar target/dbo-1.0-SNAPSHOT.jar --spring.profiles.active=qa2
+java -jar target/dbo-1.x.x.jar --spring.profiles.active=qa2
 ```
 
 # Run legacy system *stub* while QA [optional]
@@ -84,9 +84,9 @@ java -jar wiremock-jre8-standalone-2.26.3.jar --verbose --port 8888 # curl local
 
 # Build and run Docker container for Application [optional]
 ```bash
-docker build -t acme/dbo:1.0-SNAPHOT-it .
+docker build -t acme/dbo .
 
-docker run -d -p 8080:8080 --name dbo acme/dbo:1.0-SNAPHOT-it
+docker run -d -p 8080:8080 --name dbo acme/dbo
 docker exec -it dbo /bin/sh
 ```
 ```bash

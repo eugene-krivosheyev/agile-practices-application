@@ -16,7 +16,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/eugene-krivosheyev/dbo</url>
+			<url>https://maven.pkg.github.com/eugene-krivosheyev/agile-practices-application</url>
 		</repository>
 	</distributionManagement>
 

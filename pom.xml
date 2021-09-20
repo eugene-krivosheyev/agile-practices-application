@@ -12,20 +12,13 @@
 		<version>2.5.4</version>
 	</parent>
 
-	<!-- TODO Set Artifactory Server for *installing* this POM's artifact
 	<distributionManagement>
 		<repository>
-			<id>dbo-artifacts-server</id>
-			<name>dbo-releases</name>
-			<url>http://{{ artifactory_host }}:{{ artifactory_port }}/artifactory/dbo</url>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/ekr/dbo</url>
 		</repository>
-		<snapshotRepository>
-			<id>dbo-artifacts-server</id>
-			<name>dbo-snapshots</name>
-			<url>http://{{ artifactory_host }}:{{ artifactory_port }}/artifactory/dbo</url>
-		</snapshotRepository>
 	</distributionManagement>
-	-->
 
 	<repositories>
 		<repository>

@@ -21,6 +21,6 @@ jobs:
           cache: maven
 
       - name: Maven build and publish
-        run: mvn --batch-mode --errors --debug deploy -DskipTests
+        run: mvn --batch-mode --errors --debug deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

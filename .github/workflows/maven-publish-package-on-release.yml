@@ -1,4 +1,4 @@
-name: Java CI with Maven and Publish package to GitHub Packages
+name: Maven build and publish package to GitHub Packages
 
 on:
   release:
@@ -21,6 +21,6 @@ jobs:
           cache: maven
 
       - name: Maven build and publish
-        run: mvn --settings maven-settings.xml --activate-profiles github --batch-mode --errors --debug deploy -DskipTests
+        run: --batch-mode --errors --debug deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

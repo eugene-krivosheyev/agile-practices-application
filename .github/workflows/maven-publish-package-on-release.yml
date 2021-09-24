@@ -26,6 +26,6 @@ jobs:
           cache: maven
 
       - name: Maven build and publish
-        run: mvn --activate-profiles github --batch-mode --errors --debug deploy -DskipTests
+        run: mvn --activate-profiles github --settings maven-settings.xml --batch-mode --errors --debug deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

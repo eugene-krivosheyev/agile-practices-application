@@ -1,8 +1,13 @@
 name: Build and publish package to GitHub Packages
 
+#on:
+#  release:
+#    types: [created]
+
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - master
 
 jobs:
   publish:
@@ -21,6 +26,6 @@ jobs:
           cache: maven
 
       - name: Maven build and publish
-        run: mvn --batch-mode --errors --debug deploy -DskipTests
+        run: mvn --activate-profiles github --batch-mode --errors --debug deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

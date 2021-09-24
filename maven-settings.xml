@@ -33,7 +33,7 @@
         <profile>
             <id>github</id>
             <properties>
-                <altReleaseDeploymentRepository>releases::default::https://maven.pkg.github.com/eugene-krivosheyev/</altReleaseDeploymentRepository>
+                <altReleaseDeploymentRepository>releases::default::https://maven.pkg.github.com/eugene-krivosheyev/*</altReleaseDeploymentRepository>
             </properties>
         </profile>
     </profiles>

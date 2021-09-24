@@ -20,7 +20,16 @@ jobs:
           server-id: github
           cache: maven
 
-      - name: Maven build and publish
-        run: mvn --batch-mode --errors --debug deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - run: mvn --batch-mode --errors --debug clean verify
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: jar
+          path: target/*.jar

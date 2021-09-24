@@ -36,6 +36,7 @@
                 <repository>
                     <id>github</id>
                     <url>https://maven.pkg.github.com/eugene-krivosheyev/*</url>
+                    <releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
                 </repository>
             </repositories>
         </profile>

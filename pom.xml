@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.acme.banking</groupId>
-	<artifactId>dbo</artifactId>
-	<version>1.1.27</version>
+	<artifactId>dbo-app</artifactId>
+	<version>1.1.28</version>
 	<packaging>jar</packaging>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -16,7 +16,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Maven Packages</name>
-			<url>https://maven.pkg.github.com/eugene-krivosheyev/dbo</url>
+			<url>https://maven.pkg.github.com/eugene-krivosheyev/dbo-app</url>
 		</repository>
 	</distributionManagement>
 

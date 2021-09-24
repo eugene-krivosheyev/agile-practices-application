@@ -31,10 +31,9 @@ jobs:
 
       - uses: actions/upload-release-asset@v1.0.2
         env:
-          GITHUB_TOKEN: ${{ secrets.UPLOAD_RELEASE_ASSET }}
+          GITHUB_TOKEN: ${{ secrets.UPLOAD_RELEASE_ASSET }} # make PAT and then repository secret with its content
         with:
           upload_url:  ${{ github.event.release.upload_url }}
           asset_path: target/dbo-app.jar
           asset_name: dbo-app.jar
           asset_content_type: application/java-archive
-

@@ -19,4 +19,15 @@
             <!-- TODO Use https://maven.apache.org/guides/mini/guide-encryption.html for encrypt account password -->
         </server>
     </servers>
+
+    <profiles>
+        <profile>
+            <repositories>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/eugene-krivosheyev/*</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
 </settings>

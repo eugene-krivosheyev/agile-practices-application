@@ -16,7 +16,13 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Publish package
-        run: mvn --batch-mode -e -X clean deploy -DskipTests
+          cache: maven
+      - name: Maven build and publish
+        run: mvn --batch-mode --errors --debug clean deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: mkdir staging && cp target/*.jar staging
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Package
+          path: staging

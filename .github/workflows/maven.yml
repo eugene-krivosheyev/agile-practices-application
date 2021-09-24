@@ -7,9 +7,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+#    permissions:
+#      contents: read
+#      packages: write
 
     steps:
       - uses: actions/checkout@v2
@@ -21,11 +21,6 @@ jobs:
           cache: maven
 
       - name: Maven build and publish
-        run: mvn --batch-mode --errors --debug clean verify -DskipTests
+        run: mvn --batch-mode --errors --debug deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: mkdir staging && cp target/*.jar staging
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Package
-          path: staging

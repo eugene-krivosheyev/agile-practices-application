@@ -4,7 +4,7 @@
 
 	<groupId>com.acme.banking</groupId>
 	<artifactId>dbo-app</artifactId>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 	<packaging>jar</packaging>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -24,7 +24,7 @@
 	</properties>
 
 	<build>
-		<finalName>${project.artifactId}-${project.version}</finalName>
+		<finalName>${project.artifactId}</finalName>
 
 		<pluginManagement>
 			<plugins>

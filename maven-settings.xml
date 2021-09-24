@@ -17,7 +17,7 @@
         <server>
             <id>github</id>
             <username>eugene-krivosheyev</username>
-            <password>${{ secrets.GITHUB_TOKEN }}</password>
+            <password>${GITHUB_TOKEN}</password>
         </server>
         <!--
         <server>

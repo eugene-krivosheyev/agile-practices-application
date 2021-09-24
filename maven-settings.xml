@@ -11,16 +11,23 @@
             <mirrorOf>central,jcenter</mirrorOf>
         </mirror>
     </mirrors>
+    -->
 
     <servers>
+        <server>
+            <id>github</id>
+            <username>eugene-krivosheyev</username>
+            <password>${{ secrets.GITHUB_TOKEN }}</password>
+        </server>
+        <!--
         <server>
             <id>dbo-artifacts-server</id>
             <username><!- TODO Set Artifacts Server login -></username>
             <password><!- TODO Set Artifacts Server password -></password>
             <!- TODO Use https://maven.apache.org/guides/mini/guide-encryption.html for encrypt account password ->
         </server>
+        -->
     </servers>
-    -->
 
     <profiles>
         <profile>

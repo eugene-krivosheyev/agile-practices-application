@@ -3,10 +3,11 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                           https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
+    <!--
     <mirrors>
         <mirror>
             <id>dbo-artifacts-server</id>
-            <url><!-- TODO Set Corporate Artifacts Server repository URL, e.g. https://host:port/artifactory/repo-name --></url>
+            <url><!- TODO Set Corporate Artifacts Server repository URL, e.g. https://host:port/artifactory/repo-name -></url>
             <mirrorOf>central,jcenter</mirrorOf>
         </mirror>
     </mirrors>
@@ -14,14 +15,16 @@
     <servers>
         <server>
             <id>dbo-artifacts-server</id>
-            <username><!-- TODO Set Artifacts Server login --></username>
-            <password><!-- TODO Set Artifacts Server password --></password>
-            <!-- TODO Use https://maven.apache.org/guides/mini/guide-encryption.html for encrypt account password -->
+            <username><!- TODO Set Artifacts Server login -></username>
+            <password><!- TODO Set Artifacts Server password -></password>
+            <!- TODO Use https://maven.apache.org/guides/mini/guide-encryption.html for encrypt account password ->
         </server>
     </servers>
+    -->
 
     <profiles>
         <profile>
+            <id>github</id>
             <repositories>
                 <repository>
                     <id>github</id>

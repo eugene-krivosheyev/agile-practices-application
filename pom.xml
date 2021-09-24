@@ -4,13 +4,21 @@
 
 	<groupId>com.acme.banking</groupId>
 	<artifactId>dbo</artifactId>
-	<version>1.1.24</version>
+	<version>1.1.25</version>
 	<packaging>jar</packaging>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.5.4</version>
 	</parent>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Maven Packages</name>
+			<url>https://maven.pkg.github.com/eugene-krivosheyev/dbo</url>
+		</repository>
+	</distributionManagement>
 
 	<repositories>
 		<repository>

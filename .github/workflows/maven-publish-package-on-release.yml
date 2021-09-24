@@ -4,11 +4,6 @@ on:
   release:
     types: [created]
 
-#on:
-#  push:
-#    branches:
-#      - master
-
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -26,6 +21,6 @@ jobs:
           cache: maven
 
       - name: Maven build and publish
-        run: mvn --activate-profiles github --settings maven-settings.xml --batch-mode --errors --debug deploy -DskipTests
+        run: mvn --batch-mode --errors --debug deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

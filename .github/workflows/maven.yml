@@ -21,7 +21,7 @@ jobs:
           cache: maven
 
       - name: Maven build and publish
-        run: mvn --batch-mode --errors --debug clean deploy --file pom.xml -DskipTests
+        run: mvn --batch-mode --errors --debug clean verify -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: mkdir staging && cp target/*.jar staging

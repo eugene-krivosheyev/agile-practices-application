@@ -1,4 +1,4 @@
-name: Maven build and publish package to GitHub Packages
+name: Build and publish package to GitHub Packages
 
 on:
   release:

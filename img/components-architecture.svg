@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="800px" preserveAspectRatio="none" style="width:3378px;height:800px;background:#FFFFFF;" version="1.1" viewBox="0 0 3378 800" width="3378px" zoomAndPan="magnify"><defs><filter height="300%" id="fcyv6tadlpjut" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[eaaef0f7ca7d03c7cad4170c3308ec67]
+cluster web_container--><rect fill="#D3D3D3" filter="url(#fcyv6tadlpjut)" height="779.5" style="stroke:#000000;stroke-width:1.5;" width="3357" x="7" y="7"/><rect fill="#D3D3D3" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="3344" y="12"/><rect fill="#D3D3D3" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3342" y="14"/><rect fill="#D3D3D3" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3342" y="18"/><image height="48" width="48" x="1661.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACjUlEQVR4Xu2XbbniMBBG6wAFKEABClBQBShAAQpQgAIUoAAFNbSnnUt2eDNNAtu7d599en5BEjJv5iuhG/4xOh34aVZBNVZBNf5rQdfrVYdq3O93GVlM0OPx6Lput9vdbjedm6Hve34ix1hM0OVy6Z6cz2edfgX12+02XLyYoOPxmARBwU9eDfBDP7uYIPN/Yr/f47PT6dQ7jhNM+ZWM+32+S1A7pJ3fZzFBh8NBTbXxniDiTTZQCNQn2UfsMRyWtwSinVZBZAA2WG3hFwfwFa1+/cchw4rfJxZkIsSkLw3gq19A/vrZdupJTWikFA3M+6phmRdEZNVUG+zpjESCJKjtqKk2Kp2a1AndM4e5zbrtZ4UmiaGC2D0sohyWpcrabDbDdFO+2qrDGWRbFYR7qoJYQFhla0sFuUCq5LZUEPsSNRlM4INcSsKcL8VYIExWFUSxzOVQ9fTWUTi0TswQPgpU0BBVGY5pPLfZaOlJuRUjECR5jQ3drIg9AqsVl78VjUDQMG1nH1rOKlBxlkyFEBfSNBZkfHw9EV9zQHgeac3CrKCP1Rj4yTRJYRZ8Y8SCCt5+i1RHJCVpUHjXJgJB72ZxGXrBXP6GqKC8i5AQ/fM5zAcMMEJEZFkZomaPiPdCJpdR/iQSCIGZKbTvnPy68LwISvumlEykexT3hKdEOuOcocV5hWT6LcgncviDVHdzTTZhKZx2C5nz05cg/94r9ImU77uJ/GXtsadS4c4Jk/1LkE+Cgo1hku5thBek4F9OntTTPaMg308xJiuWgpOEzRZZyE0RHP3hp6v58YcQplBW9/yTPwYy/ZEwdI9vAC+El8HYBXXtXwRfkC3Wco2xEeqqn2YVVGMVVGMVVOMXXvH2B58wbOAAAAAASUVORK5CYII=" y="20"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="139" x="1616" y="80.9951">servlet container</text><!--MD5=[a13824aa5fd42673213aab98f9c96186]
+cluster container_cp--><rect fill="#D3D3D3" filter="url(#fcyv6tadlpjut)" height="97" style="stroke:#000000;stroke-width:1.5;" width="185" x="3155" y="478"/><rect fill="#D3D3D3" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="3320" y="483"/><rect fill="#D3D3D3" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3318" y="485"/><rect fill="#D3D3D3" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3318" y="489"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="169" x="3163" y="503.9951">jdbc connection pool</text><!--MD5=[6f1f6a9825b621481799a935b32daf45]
+cluster spring_boot--><rect fill="#FFFFFF" filter="url(#fcyv6tadlpjut)" height="664.5" style="stroke:#000000;stroke-width:1.5;" width="2760" x="371" y="98"/><rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="3111" y="103"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3109" y="105"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3109" y="109"/><image height="48" width="48" x="1727" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACG0lEQVR4Xu2XUbHCMBBFY6EWsIAFLNQCFrCABSzUQi3UAhaw0HcnO2Ta283uEhh4Hz0fnU4C2UOy2YQ0/zMSN/yaXchjF/LYhTLTNHHTkx8I3W63lNLlcuGOzLeFhmFIGWhxX+arQuM4ig20uO/Jh4Xu9zuiIkXwQl3FBi/UteQDQghwPp8Ph4PEW3I8HmUyoCgtRjoLbwldr1fVg8DH8Oy6zrWZm4WQkgjAkTX6vu8yEZu5QejxeGAhOGwFscEs4gVPfJeH2/CaENIlODHgdDqJDV6kBVo84oYXhEoJiQAJqGAui43gTlJUqGzaCPAQm+3iIsF56DUhIRQVGtfAsEl55nj0NSEhdWiVsky1r+ADPPoaX0iqSIRiYxcnDrDG6Y4vVrFxtyHHWON040zg8TQgARupOty3gWOssbqxRXkwDUhgYoI2b+UQ7lA83oZiwx0V3NpoCdm5Kbxkk+r3skJVKJLOfYZbTdortbvboULHgotbFWdDyA7WYJO8u6JQFTK2DGpBg01keuaakLHhYVM7Fmy2t2wVXah2tjfbuJuroAupGY28abNxa88SXWhbEo0D3CaYOgVdiKqLXHGWLUGwxDy0hy60nAyoGDvOwL0cquhCbfNRwO8J7qktulDblKSsEql+BroQx/HAD0C6BP8K2uhC7oaSGxkkUGCaV0dFF0KlHp6MmSmD2O5x/Sa60A/ZhTx2IY9/J/QHKs/ypHcvim4AAAAASUVORK5CYII=" y="111"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="335" x="1583.5" y="171.9951">framework modules management system</text><!--MD5=[2ff1f327bcc19893f8239502bffa7455]
+cluster spring_core--><rect fill="#D3D3D3" filter="url(#fcyv6tadlpjut)" height="549.5" style="stroke:#000000;stroke-width:1.5;" width="2274" x="833" y="189"/><rect fill="#D3D3D3" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="3087" y="194"/><rect fill="#D3D3D3" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3085" y="196"/><rect fill="#D3D3D3" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3085" y="200"/><image height="48" width="48" x="1946" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACHElEQVR4Xu2XUbHCMBBF46AKUIACFFQBClCAAhRUQRVUAQpQUEPvTnbItLeb3SUw8D56PjqdBLKHZLMJaf5nJG74NbuQxy7ksQtlpmnipic/ELrdbimly+XCHZlvCw3DkDLQ4r7MV4XGcRQbaHHfkw8L3e93REWK4IW6ig1eqGvJB4QQ4Hw+Hw4HibfkeDzKZEBRWox0Ft4Sul6vqgeBj+HZdZ1rMzcLISURgCNr9H3fZSI2c4PQ4/HAQnDYCmKDWcQLnvguD7fhNSGkS3BiwOl0Ehu8SAu0eMQNLwiVEhIBElDBXBYbwZ2kqFDZtBHgITbbxUWC89BrQkIoKjSugWGT8szx6GtCQurQKmWZal/BB3j0Nb6QVJEIxcYuThxgjdMdX6xi425DjrHG6caZwONpQAI2UnW4bwPHWGN1Y4vyYBqQwMQEbd7KIdyheLwNxYY7Kri10RKyc1N4ySbV72WFqlAknfsMt5q0V2p3t0OFjgUXtyrOhpAdrMEmeXdFoSpkbBnUggabyPTMNSFjw8OmdizYbG/ZKrpQ7WxvtnE3V0EXUjMaedNm49aeJbrQtiQaB7hNMHUKuhBVF7niLFuCYIl5aA9daDkZUDF2nIF7OVTRhdrmo4DfE9xTW3ShtilJWSVS/Qx0IY7jgR+AdAn+FbTRhdwNJTcySKDANK+Oii6ESj08GTNTBrHd4/pNdKEfsgt57EIe/07oDx8VrtNFd0Z9AAAAAElFTkSuQmCC" y="202"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="184" x="1878" y="262.9951">application framework</text><!--MD5=[18d9dc06195a666b97c52395d5485033]
+cluster jpa--><rect fill="#FFFFFF" filter="url(#fcyv6tadlpjut)" height="130" style="stroke:#000000;stroke-width:1.5;" width="424" x="2651" y="461.5"/><rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="3055" y="466.5"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3053" y="468.5"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="3053" y="472.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="186" x="2770" y="487.4951">jpa persistent provider</text><!--MD5=[7080e2bccbad22edfab67d02ec8dfc9e]
+cluster spring_mvc--><rect fill="#FFFFFF" filter="url(#fcyv6tadlpjut)" height="434.5" style="stroke:#000000;stroke-width:1.5;" width="1270" x="1349" y="280"/><rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="2599" y="285"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="2597" y="287"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="2597" y="291"/><image height="48" width="48" x="1960" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACG0lEQVR4Xu2XUbHCMBBFY6EWsIAFLNQCFrCABSzUQi3UAhaw0HcnO2Ta283uEhh4Hz0fnU4C2UOy2YQ0/zMSN/yaXchjF/LYhTLTNHHTkx8I3W63lNLlcuGOzLeFhmFIGWhxX+arQuM4ig20uO/Jh4Xu9zuiIkXwQl3FBi/UteQDQghwPp8Ph4PEW3I8HmUyoCgtRjoLbwldr1fVg8DH8Oy6zrWZm4WQkgjAkTX6vu8yEZu5QejxeGAhOGwFscEs4gVPfJeH2/CaENIlODHgdDqJDV6kBVo84oYXhEoJiQAJqGAui43gTlJUqGzaCPAQm+3iIsF56DUhIRQVGtfAsEl55nj0NSEhdWiVsky1r+ADPPoaX0iqSIRiYxcnDrDG6Y4vVrFxtyHHWON040zg8TQgARupOty3gWOssbqxRXkwDUhgYoI2b+UQ7lA83oZiwx0V3NpoCdm5Kbxkk+r3skJVKJLOfYZbTdortbvboULHgotbFWdDyA7WYJO8u6JQFTK2DGpBg01keuaakLHhYVM7Fmy2t2wVXah2tjfbuJuroAupGY28abNxa88SXWhbEo0D3CaYOgVdiKqLXHGWLUGwxDy0hy60nAyoGDvOwL0cquhCbfNRwO8J7qktulDblKSsEql+BroQx/HAD0C6BP8K2uhC7oaSGxkkUGCaV0dFF0KlHp6MmSmD2O5x/Sa60A/ZhTx2IY9/J/QHKs/ypHcvim4AAAAASUVORK5CYII=" y="293"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="206" x="1881" y="353.9951">web/soap/rest framework</text><!--MD5=[d5ac3844f66b12d9e08170e47495e096]
+cluster app--><rect fill="#D3D3D3" filter="url(#fcyv6tadlpjut)" height="228" style="stroke:#000000;stroke-width:1.5;" width="882" x="1713" y="371"/><rect fill="#D3D3D3" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="2575" y="376"/><rect fill="#D3D3D3" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="2573" y="378"/><rect fill="#D3D3D3" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="2573" y="382"/><image height="48" width="48" x="2130" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACcklEQVR4Xs2ZbdXiMBCF6wAFKEABClCAglWAAhSgAAUoQAEKxtB7X7LtSW9mbtKmu6fPL06bSW6S+UjDYDtj4AfLud/vf77gB79bTq+g5/M5ZDweD26xkF5B1+s1F3S5XLjFQnoFHQ6HXBD4fD7caAldguA0pAbcbjdutwQlqDrX8/nMcobhdDpxuzm621BQ8lb0HvkpuXNOZILn6BANYMvvRnxBNNjxeJxC+v1+w5FL1ylBMzROVjBHJ/nbSJMjCEuaW05ABIKIn9aASaTe3TtHEEgL+0/BgvGoX3xB2GzuYGuitO4LArTl2xItjwlBbo7Zimh5TAgyLwtvArp13TmhBFGdikAEIJTQ2M2TJbrehYKQQrinOfADNwFO2U8w5aeSUJBeHrxlgzmrzUNBwoFEdzk4srFlBrce8V+IOiUitkTsnbvdVgpCQGrfjDpyERMbvtFQxv9fQbBsLJlz8zotCRZDT7X2d4D2HFg965Ro785Jq/UrSHtfjk4hLu2do6XtVFD7lsHfecAaa7bMRqfmJh6z0RpocWos/BS8swFQ8yBTJI9h67DHJwoVWn/GoqNFgSbmFk3MF2R7Kx1Wc8YUEQLsBdtkiCmFgqrHD2yH+ynzer3ETiXWHD9Ay0cPdhbTTdcx+NEYUzxShhIk3KiTNUfY9my5AnEhEQpqWfzVYO15vBFf0O4+FKth0k908nQEbX7ZwI9G3OB3BFlROtJ1TAqNFdcxMIQXk4mbwywSZKOm/GaIEPUuqlPTLVGkxoQgq9292X++0mvBzVUix7TQJci8bK4XoEqvIDoU6DrVQq8gcu3IndvpFWR7+/Nlc34AhjIcWZi3+yUAAAAASUVORK5CYII=" y="384"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="92" x="2108" y="444.9951">application</text><!--MD5=[00d52d48042c74357a61e7009fa152b2]
+cluster dal--><polygon fill="#FFFFFF" filter="url(#fcyv6tadlpjut)" points="2423,462,2532,462,2539,500.5938,2571,500.5938,2571,575,2423,575,2423,462" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2423" x2="2539" y1="500.5938" y2="500.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="98" x="2427" y="476.9951">data access</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="40" x="2461" y="493.292">layer</text><!--MD5=[b1677732314cd4c40c10c9beea70c66a]
+cluster bl--><polygon fill="#FFFFFF" filter="url(#fcyv6tadlpjut)" points="2263,462,2389,462,2396,500.5938,2399,500.5938,2399,575,2263,575,2263,462" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2263" x2="2396" y1="500.5938" y2="500.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="115" x="2267" y="476.9951">business logic</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="40" x="2309.5" y="493.292">layer</text><!--MD5=[d734c67353e61c844ae2200ab16c7d04]
+cluster cl--><polygon fill="#FFFFFF" filter="url(#fcyv6tadlpjut)" points="2095,462,2146,462,2153,500.5938,2239,500.5938,2239,575,2095,575,2095,462" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2095" x2="2153" y1="500.5938" y2="500.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="25" x="2106.5" y="476.9951">api</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="40" x="2104" y="493.292">layer</text><!--MD5=[1592cd72737818510be140208bad44d7]
+cluster pl--><polygon fill="#FFFFFF" filter="url(#fcyv6tadlpjut)" points="1945,462,2061,462,2068,500.5938,2071,500.5938,2071,575,1945,575,1945,462" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1945" x2="2068" y1="500.5938" y2="500.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="105" x="1949" y="476.9951">presentation</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="40" x="1986.5" y="493.292">layer</text><!--MD5=[708e88083a1b13363466ef3c38acd2f0]
+entity tcp connection \n management--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="154" x="23" y="504.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="157" y="509.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="155" y="511.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="155" y="515.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="38" y="537.4951">tcp connection</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="42" y="553.792">management</text><!--MD5=[3cf7bd6edefa8c64cf49623d663237d5]
+entity thread pools \n management--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="140" x="212" y="504.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="332" y="509.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="330" y="511.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="330" y="515.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="227" y="537.4951">thread pools</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="231" y="553.792">management</text><!--MD5=[e018d793b981cf658e535483fd13ee57]
+entity http protocol \n handling--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="143" x="28.5" y="635.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="151.5" y="640.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="149.5" y="642.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="149.5" y="646.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="43.5" y="668.4951">http protocol</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="47.5" y="684.792">handling</text><!--MD5=[57d187a0485d9babe5efd8353ff1c0ad]
+entity jdbc driver--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="117" x="3188.5" y="513"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="3285.5" y="518"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="3283.5" y="520"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="3283.5" y="524"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="3203.5" y="545.9951">jdbc driver</text><!--MD5=[ac31a8d56564d21272e6b42ac3364dbb]
+entity framework modules \n management--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="186" x="628" y="504.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="794" y="509.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="792" y="511.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="792" y="515.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="643" y="537.4951">framework modules</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="647" y="553.792">management</text><!--MD5=[909ce915799014e07f080072fc1b72ad]
+entity application \n configuration context \n management--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="78.8906" style="stroke:#A80036;stroke-width:1.5;" width="205" x="387.5" y="496.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="572.5" y="501.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="570.5" y="503.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="570.5" y="507.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="402.5" y="529.4951">application</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="406.5" y="545.792">configuration context</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="406.5" y="562.0889">management</text><!--MD5=[6f1a8b35644bceeb2903caae649c99c4]
+entity application configuration \n handling--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="225" x="849.5" y="504.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1054.5" y="509.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1052.5" y="511.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1052.5" y="515.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="864.5" y="537.4951">application configuration</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="868.5" y="553.792">handling</text><!--MD5=[2102410321464c678114c6d8b4e48c48]
+entity application components \n management--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="220" x="1110" y="504.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1310" y="509.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1308" y="511.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1308" y="515.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="1125" y="537.4951">application components</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="1129" y="553.792">management</text><!--MD5=[7800fa1a190c9c9567ea3e8f8a33080e]
+entity logging \n management--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="140" x="892" y="635.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1012" y="640.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1010" y="642.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1010" y="646.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="907" y="668.4951">logging</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="911" y="684.792">management</text><!--MD5=[b9155d09ee36e63b6ad58f050ac90a13]
+entity db data mapping--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="163" x="2887.5" y="513"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="3030.5" y="518"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="3028.5" y="520"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="3028.5" y="524"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="2902.5" y="545.9951">db data mapping</text><!--MD5=[6ba770d213e1e2bc227e20945ba3537d]
+entity db data caching \n management--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="158" x="2694" y="504.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="2832" y="509.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2830" y="511.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2830" y="515.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="2709" y="537.4951">db data caching</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="2713" y="553.792">management</text><!--MD5=[8a15f22c496964dce6a7ba0f78b6e272]
+entity app_cp--><rect fill="#FFFFFF" filter="url(#fcyv6tadlpjut)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="192" x="2635" y="644"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="2807" y="649"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2805" y="651"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2805" y="655"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="2650" y="676.9951">jdbc connection pool</text><!--MD5=[3eb62142285197595ca286011f0b377f]
+entity http protocol \n API--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="143" x="1365.5" y="504.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1488.5" y="509.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1486.5" y="511.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1486.5" y="515.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="1380.5" y="537.4951">http protocol</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="1384.5" y="553.792">API</text><!--MD5=[4a9b132f88fd5dc1d312fb353f6dc7a2]
+entity request routing--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="151" x="1543.5" y="513"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1674.5" y="518"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1672.5" y="520"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1672.5" y="524"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="1558.5" y="545.9951">request routing</text><!--MD5=[ffa56ce28b3969d71cc377df1f359585]
+entity monitoring \n endpoint--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="124" x="1375" y="635.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1479" y="640.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1477" y="642.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1477" y="646.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="1390" y="668.4951">monitoring</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="1394" y="684.792">endpoint</text><!--MD5=[b91803f1d9de982884dd00586f45e4cd]
+entity app data \n caching management--><rect fill="#D3D3D3" filter="url(#fcyv6tadlpjut)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="199" x="1729.5" y="504.5"/><rect fill="#D3D3D3" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1908.5" y="509.5"/><rect fill="#D3D3D3" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1906.5" y="511.5"/><rect fill="#D3D3D3" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1906.5" y="515.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1744.5" y="537.4951">app data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155" x="1748.5" y="553.792">caching management</text><!--MD5=[24b005fcbd1feaad7f7dedc55a678d14]
+entity repository--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="115" x="2439.5" y="513"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="2534.5" y="518"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2532.5" y="520"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2532.5" y="524"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="2454.5" y="545.9951">repository</text><!--MD5=[38bfa9dc6018363cafe15f923a4b8db9]
+entity service--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="91" x="2285.5" y="513"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="2356.5" y="518"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2354.5" y="520"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2354.5" y="524"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="2300.5" y="545.9951">service</text><!--MD5=[c05fcadc036a699206cfdfa4a4fdb889]
+entity controller--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="111" x="2111.5" y="513"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="2202.5" y="518"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2200.5" y="520"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2200.5" y="524"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="2126.5" y="545.9951">controller</text><!--MD5=[bf2f9096aec1c19dd7dbe35a7c751e39]
+entity view--><rect fill="#FEFECE" filter="url(#fcyv6tadlpjut)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="72" x="1983" y="513"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="2035" y="518"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2033" y="520"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="2033" y="524"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="1998" y="545.9951">view</text><!--MD5=[5415ce7bc185a18d2ebbe5843f1ed174]
+link jpa to app_cp--><path d="M2670.9355,591.688 C2671.0233,591.9265 2671.1117,592.1648 2671.2007,592.4028 C2671.3786,592.8789 2671.559,593.354 2671.7419,593.8279 C2672.1077,594.7756 2672.4834,595.7188 2672.8692,596.6556 C2674.4123,600.4031 2676.1175,604.0508 2678,607.5 C2684.43,619.287 2693.71,630.622 2702.71,640.124 " fill="none" id="jpa-to-app_cp" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2706.27,643.808,2702.8984,634.5542,2702.7978,640.2102,2697.1419,640.1097,2706.27,643.808" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[108071491d6574585b4e8a44c7f12a19]
+link service to repository--><path d="M2376.71,536 C2395.76,536 2414.8,536 2433.84,536 " fill="none" id="service-to-repository" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2439.21,536,2430.21,532,2434.21,536,2430.21,540,2439.21,536" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7e32a097be010eedbcd0f8c178ded199]
+link controller to service--><path d="M2222.73,536 C2241.81,536 2260.88,536 2279.95,536 " fill="none" id="controller-to-service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2285.33,536,2276.33,532,2280.33,536,2276.33,540,2285.33,536" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b364136f1145b6edcb5204c7fba1d708]
+link view to controller--><path d="M2055.13,536 C2072.03,536 2088.93,536 2105.82,536 " fill="none" id="view-to-controller" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2111.07,536,2102.07,532,2106.07,536,2102.07,540,2111.07,536" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[47d834c05d98317ada5181048b1920ac]
+link tcp connection \n management to thread pools \n management--><!--MD5=[aadfcd15de77195d3e823f240161aee1]
+link tcp connection \n management to http protocol \n handling--><!--MD5=[6d03bad735790b43748ba09ebc40c62c]
+link application configuration \n handling to application components \n management--><!--MD5=[ef879122ef289180e76a7a833081789d]
+link application configuration \n handling to logging \n management--><!--MD5=[02634b8e74edf60d91a8cad0b28a881f]
+link http protocol \n API to request routing--><!--MD5=[a1ef7547c2d50bae29a7d9370c4b7f42]
+link http protocol \n API to monitoring \n endpoint--><!--MD5=[6171fd8d8f05086fd89c06f43e243033]
+@startuml
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.1.0/devicons
+!includeurl ICONURL/coda.puml
+!define SPRITESURL https://raw.githubusercontent.com/rabelenda/cicon-plantuml-sprites/v1.0/sprites
+!includeurl SPRITESURL/server.puml
+!includeurl SPRITESURL/linux.puml
+!includeurl SPRITESURL/docker.puml
+!includeurl SPRITESURL/java.puml
+!includeurl SPRITESURL/tomcat.puml
+!includeurl SPRITESURL/cog.puml
+
+
+component "<$tomcat>\nservlet container" as web_container #lightgray {
+    [tcp connection \n management]
+    [thread pools \n management]
+    [http protocol \n handling]
+              
+    component "jdbc connection pool" as container_cp {
+        [jdbc driver]
+    }
+
+    component "<$coda>\nframework modules management system" as spring_boot #white {
+        [framework modules \n management]
+        [application \n configuration context \n management]
+
+        component "<$coda>\napplication framework" as spring_core #lightgray {
+            [application configuration \n handling]
+            [application components \n management]
+            [logging \n management]
+
+            component "jpa persistent provider" as jpa #white {
+                [db data mapping]
+                [db data caching \n management]
+            }
+            
+            component "jdbc connection pool" as app_cp {
+                [jdbc driver]
+            }
+            jpa - -> app_cp
+
+            component "<$coda>\nweb/soap/rest framework" as spring_mvc #white {
+                [http protocol \n API]
+                [request routing]
+                [monitoring \n endpoint]
+
+                component "<$cog>\napplication" as app #lightgray {
+                    [app data \n caching management] #lightgray 
+                    
+                    package "data access \n layer" as dal #white {
+                        [repository]
+                    }
+                    
+                    package "business logic \n layer" as bl #white {
+                        [service]
+                    }
+                    
+                    package "api \n layer" as cl #white {
+                        [controller]
+                    }
+                    
+                    package "presentation \n layer" as pl #white {
+                        [view]
+                    }
+
+                    service -> repository 
+                    controller -> service
+                    view -> controller
+                }
+            }
+        }
+    }
+}
+@enduml
+
+@startuml
+sprite $coda [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000300000000
+000000000000000000000000000000000000006F80000000
+00000000000000000000000000000000000005FF60000000
+0000000000000000000000000000000000004FF500000000
+000000000000000000000000002432000004FF4000000000
+000000000000000000000049DFFFFFFC503FF30000000000
+000000000000000000007DFFFFFFFFFFF7FE300000000000
+0000000000000000006EFFFFFFFFFFFFAEE3000000000000
+00000000000000001CFFFFFFFFFFFFFAEDAD100000000000
+0000000000000004EFFFFFFFFFFFFFBEDBFFA00000000000
+000000000000005FFFFFFFFFFFFFFBDCBFFFF10000000000
+00000000000004FFFFFFFFFFFFFFCDCCFFFFF70000000000
+0000000000002FFFFFFFFFFFFFFCDCCFFFFFFB0000000000
+000000000000CFFFFFFFFFFFFFDCBCFFFFFFFD0000000000
+000000000007FFFFFFFFFFFFFDCBDFFFFFFFFF0000000000
+00000000002FFFFFFFFFFFFFDCBEFFFFFFFFFF0000000000
+00000000009FFFFFFFFFFFFECAEFFFFFFFFFFF0000000000
+0000000001FFFFFFFFFFFFEBAEFFFFFFFFFFFD0000000000
+0000000008FFFFFFFFFFFEBAFFFFFFFFFFFFFA0000000000
+000000000DFFFFFFFFFFFBAFFFFFFFFFFFFFF60000000000
+000000002FFFFFFFFFFFAAFFFFFFFFFFFFFFF10000000000
+000000007FFFFFFFFFFABFFFFFFFFFFFFFFFB00000000000
+00000000BFFFFFFFFFABFFFFFFFFFFFFFFFF400000000000
+00000000EFFFFFFFF9BFFFFFFFFFFFFFFFFB000000000000
+00000001FFFFFFFF9CFFFFFFFFFFFFFFFFF2000000000000
+00000004FFFFFFF9CFFFFFFFFFFFFFFFFF60000000000000
+00000007FFFFFFACFFFFFFFFFFFFFFFFFA00000000000000
+00000008FFFFFBCFFFFFFFFFFFFFFFFFB000000000000000
+0000000AFFFFCDFFFFFFFFFFFFFFFFF90000000000000000
+0000000CFFFDEFFFFFFFFFFFFFFFFF700000000000000000
+0000000DFFFFFFFFFFFFFFFFFFFFC2000000000000000000
+0000000EFFFFFFFFFFFFFFFFFFC400000000000000000000
+0000000FFFFFFFFFFFFFFFFE930000000000000000000000
+0000000CFFFFFFFFFFEC9620000000000000000000000000
+000000015554433210000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<DEV CODA>> White
+sprite $server [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000122222222222222222222222222222222222222221000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFF4444FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFF0000FFFFFFFFFFF0000000000000000000EFF8000
+0008FFF0000FFFFFFFFFFF0000000000000000000EFF8000
+0008FFF0000FFFFFFFFFFF4444444444444444444EFF8000
+0008FFF9999FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0006CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC6000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000488888888888888888888888888888888888888884000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFF0000FFFFFFFFFFF9999999999999999999FFF8000
+0008FFF0000FFFFFFFFFFF0000000000000000000EFF8000
+0008FFF0000FFFFFFFFFFF0000000000000000000EFF8000
+0008FFF0000FFFFFFFFFFF9999999999999999999FFF8000
+0008FFFEEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000488888888888888888888888888888888888888884000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0006CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC6000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFF9999FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFF0000FFFFFFFFFFF4444444444444444444EFF8000
+0008FFF0000FFFFFFFFFFF0000000000000000000EFF8000
+0008FFF0000FFFFFFFFFFF0000000000000000000EFF8000
+0008FFF4444FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000122222222222222222222222222222222222222221000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+sprite $linux [48x48/16] {
+000000000000000000029EFFC94000000000000000000000
+0000000000000000007FFFFFFFFC10000000000000000000
+000000000000000006FFFFFFFFDFE2000000000000000000
+00000000000000000EFFFFFFFF29FC000000000000000000
+00000000000000004FFFFFFFFFDFFF400000000000000000
+00000000000000007FFFFFFFFFFFFFB00000000000000000
+00000000000000009FFFFFFFFDFFFFF00000000000000000
+00000000000000009F42CFFA103FFFF20000000000000000
+00000000000000009D476FF15719FFF20000000000000000
+00000000000000008BDB5FF0FD76FFF20000000000000000
+00000000000000008CBE4891FFB6FFF30000000000000000
+00000000000000007F6620115C9AFFF40000000000000000
+00000000000000006F300000002AFFF80000000000000000
+00000000000000005D1000000185FFFC0000000000000000
+00000000000000004FD10004551BF7FF1000000000000000
+00000000000000002FFC9A943B5CF81F6000000000000000
+00000000000000006F7D324AB206FFBFD000000000000000
+0000000000000001EB0CFFF40000AFFFF700000000000000
+0000000000000009F301AA2000001FFFFE10000000000000
+000000000000005FB000000000000BFFFFC0000000000000
+00000000000002EF50000000000006FFFFFC000000000000
+0000000000001EFF20000000000002FFCFFF800000000000
+0000000000008FFF400000000000007FFAFFF20000000000
+000000000002FAFA000000000000000EF9CFF90000000000
+000000000008FEF20000000000000008FF6FFF1000000000
+00000000000DFFA00000000000000003FF7FFF8000000000
+00000000004FFF300000000000000000FFCDFFE000000000
+00000000009FFC000000000000000000DFF9FFF400000000
+0000000001FAF9000000000000000000CFF9FFF800000000
+0000000008F9F8000000000000000000BFF8FFFB00000000
+000000001FF8F80000000000000000009FEAFFFE00000000
+000000005FF8D70000000000000000005C67FFFE00000000
+000000005FFE430000000000000000007FFFEFFE00000000
+00000000121BE2000000000000000006FFFFFFF900000000
+000000001000BE300000000000000072AFFFFF8000000000
+0000000150000DF600000000000000801FFFFC0110000000
+0000257C100002FF800000000000008004BC800540000000
+000665500000006FFB100000000000900000000290000000
+000600000000000BFFC000000000009200000000D6000000
+0002600000000001EFF00000000003840000000019910000
+0000C000000000006E60000000004D8400000000001A0000
+0001C00000000000080200000004ED930000000000080000
+0008600000000000068E732257CFF9C10000000005920000
+000C00000000000002D8FFFFFFFFF4F000000039C5000000
+0007C7410000000001F5FFFFFFFFF5F0000009E500000000
+0000148BC951000004FDB98888888DF50002CA1000000000
+00000000026BC8437E700000000001FF748F700000000000
+00000000000016CEA20000000000003CFFD4000000000000
+}
+sprite $docker [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000AEEEEC00000000000000000000000
+0000000000000000000CFFFFE00000000000000000000000
+0000000000000000000CFFFFE00000000000000000000000
+0000000000000000000CFFFFE00000000000000000000000
+0000000000222222222CFFFFE00000000000000000000000
+0000000002FFFFFFFFFFFFFFE000000000002D4000000000
+0000000002FFFFFFFFFFFFFFE00000000000CFF300000000
+0000000002FFFFFFFFFFFFFFE00000000001FFFE00000000
+0000000002FFFFFFFFFFFFFFE00000000004FFFF70000000
+0000078888FFFFFFFFFFFFFFF88885000004FFFFC0221000
+00000EFFFFFFFFFFFFFFFFFFFFFFF9000003FFFFFFFFFB50
+00000EFFFFFFFFFFFFFFFFFFFFFFF9000000EFFFFFFFFFD0
+00000EFFFFFFFFFFFFFFFFFFFFFFF90000008FFFFFFFFF40
+00000EFFFFFFFFFFFFFFFFFFFFFFF9000004BFFFFFFFE400
+0BCCCFFFFFFFFFFFFFFFFFFFFFFFFECCCDFFFFFFFEC60000
+0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000000
+1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF300000000
+0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000000000
+0EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000000000
+0BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF70000000000
+07FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC00000000000
+01FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000000000
+009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3000000000000
+001EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE30000000000000
+0004FFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000000000
+00006FFFFFFFFFFFFFFFFFFFFFFFFFF80000000000000000
+000005FFFFFFFFFFFFFFFFFFFFFFFC300000000000000000
+0000002CFFFFFFFFFFFFFFFFFFFC40000000000000000000
+000000003AFFFFFFFFFFFFFFD72000000000000000000000
+0000000000168BDEEECB9740000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+sprite $java [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000800000000000000000000
+000000000000000000000000002C00000000000000000000
+000000000000000000000000009E00000000000000000000
+00000000000000000000000005FC00000000000000000000
+0000000000000000000000005FF600000000000000000000
+000000000000000000000008FFD000000000000000000000
+0000000000000000000001CFFF3016BC3000000000000000
+000000000000000000003EFFF42BFF900000000000000000
+00000000000000000004FFFF35FFF6000000000000000000
+0000000000000000002FFFF22FFE20000000000000000000
+0000000000000000009FFF309FF400000000000000000000
+000000000000000000DFF800CFF000000000000000000000
+000000000000000000CFF200CFF300000000000000000000
+0000000000000000005FF2007FFA00000000000000000000
+0000000000000000000EF6000EFF40000000000000000000
+00000000000000000003EE0004FFA0000000000000000000
+000000000000000000003E7000CFC0000000000000000000
+0000000000000000000002C2009F80000000000000000000
+00000000000000357841000400D900000698300000000000
+0000000000008EFFA100000005400022127FF40000000000
+000000000000FFFFFCA999999ABDFFC10008FB0000000000
+0000000000003BFFFFFFFFFFFFEC84000006FB0000000000
+00000000000000015756664420000000000AF80000000000
+0000000000000008FC20000000146000002FF30000000000
+000000000000000EFFFDB99ABDFFFB1003DF400000000000
+00000000000000019EFFFFFFFFFD95005E91000000000000
+000000000000000002835666420000004100000000000000
+00000000000000004FF8422457BF90000000000000000000
+00000000000246409FFFFFFFFFFFF5000000000000000000
+0000000002CFFB8605BEFFFFFEB71000000C100000000000
+000000000AFFC0000000122100000000008F600000000000
+0000000008FFF92000000000000000004AFE300000000000
+00000000007FFFFDA8644422234689CFFFA1004100000000
+0000000000015ADFFFFFFFFFFFFFFFEB6100199000000000
+000000000000000135688999887431000049FC1000000000
+00000000000000036420000000000248BFFD600000000000
+00000000000000000258ACCCCCDEFFFDB730000000000000
+000000000000000000000012444442000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+sprite $tomcat [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000040000000000000000200000
+0000000000000000000000001FC300000000000009F40000
+0000000000000000000000005FFF600000000001DFF60000
+0000000000000000000000008FFFF3000000001DFFF80000
+0000000000000000000000009FFFFB57999988BFFFF90000
+0000000000000000000000009FFFFFFFFFFFFFFFFFFC0000
+000000000000000000000000AFFFFFFFFFFFFFFFFFFC0000
+000000000013426DA4000000BFFFFFFFFFFFFFFFFFFC0000
+000000005BC99AFFFFA100009FFFFFFFFFFFFFFFFFFB0000
+00000009910000DFFFFD10007FFFFFFFFFFFFFFFFFF90000
+0000006800000017999610003FFFFFFFFFFFFFFFFFF70000
+000000C000000000000000000FFFFFFFFFFFFFFFFFF40000
+0000058000000000000001760AFFFFFFFFFFFFFFFFF10000
+00000740000000000004BFFE02FFFFFFFFFFFFFFFFA00000
+000008400000000004CFFFFF708FFFFFFFFFFFFFFF400000
+0000075000000002CFFFFFFFF10DFFFFFFFFFFFFFC000000
+000003800000008FFFFFFFFFFB04FFFFFFFFFFFFF6000000
+000000C000002DFFFFFFFFFFFF607FFFFFFFFFFFC0000000
+000000740006FFFFFFFFFFFFFFF20AFFFFFFFFFF20000000
+0000000A007FFFFFFFFFFFFFFFFE108FFFFFFFF500000000
+0000000009FFFFFFFFFFFFFFFFFFD207FFFFFF7000000000
+000000009FFFFFFFFFFFFFFFFFFFFE202CFFF50000000000
+00000008FFFFFFFFFFFFFFFFFFFFFFF6004A300000000000
+0000006FFFFFFFFFFFFFFFFFFFFFFFFFB200000000000000
+000004FFFFFD9889BDEFFFFFFFFFFFFFFFC6850000000000
+00002FFFF91000000000368CFFFFFFFFFFFFFF4000000000
+0000CFFE20000BFFD5000000159EFFFFFFFFFFF300000000
+0008FFF30000009FFC00000000004AFFFFFFFFFF40000000
+003FFF7000000006FFCCA10000000017DFFFFFFFF2000000
+00CFFF10000000003DFFF6000000000004BFFFFFFE100000
+07FFFD0000000000000000000000000000039FFFFFFEB400
+1FFFFC000000000000000000000000000000029FFFFFFF80
+29999900000000000000000000000000000000018FFFFFF4
+000000000000000000000000000000000000000002788882
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+sprite $cog [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000068860000000000000000000000
+0000000000000000000004FFFF5000000000000000000000
+0000000000000000000009FFFFA000000000000000000000
+000000000000000000000EFFFFF100000000000000000000
+000000000000000000006FFFFFF700000000000000000000
+00000000010000000000BFFFFFFC00000000001000000000
+000000004FC500000004FFFFFFFF500000005CF400000000
+00000004FFFFD60029EFFFFFFFFFFF92006DFFFF40000000
+0000001FFFFFFFEAFFFFFFFFFFFFFFFFAEFFFFFFF1000000
+0000000CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000000
+00000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF60000000
+00000000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD00000000
+000000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000000
+000000000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000000
+0000000009FFFFFFFFFFFFCA9BFFFFFFFFFFFFA000000000
+000000002FFFFFFFFFFD50000005CFFFFFFFFFF200000000
+000000009FFFFFFFFF900000000009FFFFFFFFF900000000
+00000000EFFFFFFFF90000000000008FFFFFFFFF00000000
+00000004FFFFFFFFD00000000000000CFFFFFFFF50000000
+000006BFFFFFFFFF5000000000000004FFFFFFFFFC600000
+0049EFFFFFFFFFFF0000000000000000DFFFFFFFFFFF9400
+06FFFFFFFFFFFFFC00000000000000009FFFFFFFFFFFFF60
+08FFFFFFFFFFFFFA00000000000000008FFFFFFFFFFFFF80
+08FFFFFFFFFFFFFA00000000000000008FFFFFFFFFFFFF80
+06FFFFFFFFFFFFFB00000000000000009FFFFFFFFFFFFF60
+0049FFFFFFFFFFFF0000000000000000DFFFFFFFFFFFA500
+000016CFFFFFFFFF5000000000000004FFFFFFFFFC710000
+00000004FFFFFFFFC00000000000000CFFFFFFFF50000000
+00000000EFFFFFFFF90000000000008FFFFFFFFF00000000
+000000009FFFFFFFFF800000000007FFFFFFFFF900000000
+000000002FFFFFFFFFFC40000003CFFFFFFFFFF200000000
+000000000AFFFFFFFFFFFE9889DFFFFFFFFFFFA000000000
+000000000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFF100000000
+000000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000000
+00000000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00000000
+00000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF60000000
+0000000CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000000
+0000001FFFFFFFEAFFFFFFFFFFFFFFFFAFFFFFFFF2000000
+00000004FFFFD61029EFFFFFFFFFFF92017EFFFF40000000
+000000004FD600000004FFFFFFFF500000006DF400000000
+00000000010000000000BFFFFFFC00000000001000000000
+000000000000000000006FFFFFF700000000000000000000
+000000000000000000000EFFFFF100000000000000000000
+0000000000000000000009FFFFA000000000000000000000
+0000000000000000000004FFFF5000000000000000000000
+000000000000000000000068860000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+component "<$tomcat>\nservlet container" as web_container #lightgray {
+    [tcp connection \n management]
+    [thread pools \n management]
+    [http protocol \n handling]
+              
+    component "jdbc connection pool" as container_cp {
+        [jdbc driver]
+    }
+
+    component "<$coda>\nframework modules management system" as spring_boot #white {
+        [framework modules \n management]
+        [application \n configuration context \n management]
+
+        component "<$coda>\napplication framework" as spring_core #lightgray {
+            [application configuration \n handling]
+            [application components \n management]
+            [logging \n management]
+
+            component "jpa persistent provider" as jpa #white {
+                [db data mapping]
+                [db data caching \n management]
+            }
+            
+            component "jdbc connection pool" as app_cp {
+                [jdbc driver]
+            }
+            jpa - -> app_cp
+
+            component "<$coda>\nweb/soap/rest framework" as spring_mvc #white {
+                [http protocol \n API]
+                [request routing]
+                [monitoring \n endpoint]
+
+                component "<$cog>\napplication" as app #lightgray {
+                    [app data \n caching management] #lightgray 
+                    
+                    package "data access \n layer" as dal #white {
+                        [repository]
+                    }
+                    
+                    package "business logic \n layer" as bl #white {
+                        [service]
+                    }
+                    
+                    package "api \n layer" as cl #white {
+                        [controller]
+                    }
+                    
+                    package "presentation \n layer" as pl #white {
+                        [view]
+                    }
+
+                    service -> repository 
+                    controller -> service
+                    view -> controller
+                }
+            }
+        }
+    }
+}
+@enduml
+
+PlantUML version 1.2022.1beta9(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

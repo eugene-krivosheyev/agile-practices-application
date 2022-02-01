@@ -31,12 +31,12 @@ component "<$tomcat>\nservlet container" as web_container #lightgray {
 
     component "<$coda>\nframework modules management system" as spring_boot #white {
         [framework modules \n management]
-        [application \n configuration context \n management]
+        [application \n configuration \n management]
 
         component "<$coda>\napplication framework" as spring_core #lightgray {
-            [application configuration \n handling]
-            [application components \n management]
-            [logging \n management]
+            [application configuration \n applying]
+            [application components \n context management]
+            [AOP \n applying]
 
             component "jpa persistent provider" as jpa #white {
                 [db data mapping]
@@ -51,10 +51,9 @@ component "<$tomcat>\nservlet container" as web_container #lightgray {
             component "<$coda>\nweb/soap/rest framework" as spring_mvc #white {
                 [http protocol \n API]
                 [request routing]
-                [monitoring \n endpoint]
 
                 component "<$cog>\napplication" as app #lightgray {
-                    [app data \n caching management] #lightgray 
+                    [app data \n caching] #lightgray 
                     
                     package "data access \n layer" as dal #white {
                         [repository]

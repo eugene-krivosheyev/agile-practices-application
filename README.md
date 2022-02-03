@@ -158,7 +158,8 @@ gradle clean check bootJar [jacocoTestReport pitest -i --scan --no-build-cache -
 Run app with embedded Derby DB
 ------------------------------
 ```shell
-java -Dderby.stream.error.file=log/derby.log -jar target/dbo-app.jar --spring.profiles.active=qa
+[export SPRING_PROFILES_ACTIVE=qa]
+java [-Dspring.profiles.active=qa] -Dderby.stream.error.file=log/derby.log -jar target/dbo-app.jar [--spring.profiles.active=qa]
 ```
 open [http://localhost:8080/dbo/swagger-ui/](http://localhost:8080/dbo/swagger-ui/)
 

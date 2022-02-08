@@ -159,7 +159,8 @@ Run app with embedded Derby DB
 ------------------------------
 ```shell
 [export SPRING_PROFILES_ACTIVE=qa]
-java [-Dspring.profiles.active=qa] -Dderby.stream.error.file=log/derby.log -jar target/dbo-app.jar [--spring.profiles.active=qa]
+java [-Dspring.profiles.active=qa] [-Dderby.stream.error.file=log/derby.log] -jar target/dbo-app.jar [--spring.profiles.active=qa]
+java -jar target/dbo-app.jar
 ```
 open [http://localhost:8080/dbo/swagger-ui/](http://localhost:8080/dbo/swagger-ui/)
 

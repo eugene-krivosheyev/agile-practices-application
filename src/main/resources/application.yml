@@ -7,6 +7,22 @@ features:
 spring:
   profiles.active: qa
   jpa.properties.hibernate.generate_statistics: true
+  integration.legacyAccountingSystem:
+    baseUrl: "http://localhost:8888/api"
+    accountsEndpoint: "/account"
+  datasource.hikari.pool-name: hikari-connection-pool
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: validate
+  liquibase: #https://javadeveloperzone.com/spring-boot/spring-boot-liquibase-example/
+    enabled: true
+    contexts: prod, qa
+    liquibase-schema: liquibase
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    change-log: classpath:/db-changelog.xml
+    rollback-file: liquibase-rollback.sql
+    test-rollback-on-update: true
 
 server:
   port: 8080
@@ -44,9 +60,6 @@ spring:
 
 spring:
   config.activate.on-profile: it
-  integration.legacyAccountingSystem:
-    baseUrl: "http://localhost:8888/api"
-    accountsEndpoint: "/account"
   main.lazy-initialization: true
   datasource:
     driverClassName: org.apache.derby.jdbc.EmbeddedDriver
@@ -54,138 +67,65 @@ spring:
     username: APP
     password: APP
     hikari:
-      poolName: hikari-connection-pool
-      maximumPoolSize: 2
-      minimumIdle: 1
-  jpa:
-    show-sql: true
-    hibernate.ddl-auto: validate
-  liquibase: #https://javadeveloperzone.com/spring-boot/spring-boot-liquibase-example/
-    enabled: true
-    contexts: prod, qa
-    change-log: classpath:/db-changelog.xml
-    liquibaseSchema: liquibase
-    user: ${spring.datasource.username}
-    password: ${spring.datasource.password}
+      maximum-pool-size: 2
+      minimum-idle: 1
+  liquibase:
+    test-rollback-on-update: false
 
 ---
 
 spring:
   config.activate.on-profile: qa
-  integration.legacyAccountingSystem:
-    baseUrl: "http://localhost:8888/api"
-    accountsEndpoint: "/account"
   datasource:
     driverClassName: org.apache.derby.jdbc.EmbeddedDriver
     url: jdbc:derby:dbo-db;create=true
     username: APP
     password: APP
     hikari:
-      poolName: hikari-connection-pool
-      maximumPoolSize: 5
-      minimumIdle: 1
-      idleTimeout: 600000
-  jpa:
-    show-sql: true
-    hibernate.ddl-auto: validate
-  liquibase:
-    enabled: true
-    contexts: prod, qa
-    change-log: classpath:/db-changelog.xml
-    liquibaseSchema: liquibase
-    user: ${spring.datasource.username}
-    password: ${spring.datasource.password}
-    rollback-file: liquibase-rollback.sql
-    test-rollback-on-update: true
+      maximum-pool-size: 5
+      minimum-idle: 1
+      idle-timeout: 600000
 
 ---
 
 spring:
   config.activate.on-profile: qa2
-  integration.legacyAccountingSystem:
-    baseUrl: "http://localhost:8888/api"
-    accountsEndpoint: "/account"
   datasource:
     driverClassName: org.apache.derby.jdbc.ClientDriver
     url: jdbc:derby://localhost/dbo-db;create=true
     username: APP
     password: APP
     hikari:
-      poolName: hikari-connection-pool
-      maximumPoolSize: 5
-      minimumIdle: 1
-      idleTimeout: 600000
-  jpa:
-    show-sql: true
-    hibernate.ddl-auto: validate
-  liquibase:
-    enabled: true
-    contexts: prod, qa
-    change-log: classpath:/db-changelog.xml
-    liquibaseSchema: liquibase
-    user: ${spring.datasource.username}
-    password: ${spring.datasource.password}
-    rollback-file: liquibase-rollback.sql
-    test-rollback-on-update: true
+      maximum-pool-size: 5
+      minimum-idle: 1
+      idle-timeout: 600000
 
 ---
 
 spring:
   config.activate.on-profile: preprod
-  integration.legacyAccountingSystem:
-    baseUrl: #should by externalized
-    accountsEndpoint: "/account"
-  sql.init:
-    platform: postgres
-    mode: always
   datasource:
     driverClassName: org.postgresql.Driver
-    url:  #should by externalized
-    username: #should by externalized
-    password: #should by externalized
+    url:  #should be externalized
+    username: #should be externalized
+    password: #should be externalized
     hikari:
-      poolName: hikari-connection-pool
-      maximumPoolSize: 10
-      minimumIdle: 2
-      idleTimeout: 1800000
-  jpa.hibernate.ddl-auto: validate
-  liquibase:
-    enabled: true
-    contexts: prod, qa
-    change-log: classpath:/db-changelog.xml
-    liquibaseSchema: liquibase
-    user: ${spring.datasource.username}
-    password: ${spring.datasource.password}
-    rollback-file: liquibase-rollback.sql
-    test-rollback-on-update: true
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 18000000
 
 ---
 
 spring:
   config.activate.on-profile: prod
-  integration.legacyAccountingSystem:
-    baseUrl: "http://localhost:8888/api"
-    accountsEndpoint: "/account"
-  sql.init:
-    platform: postgres
-    mode: always
   datasource:
     driverClassName: org.postgresql.Driver
-    url: #should by externalized
-    username: #should by externalized
-    password: #should by externalized
+    url: #should be externalized
+    username: #should be externalized
+    password: #should be externalized
     hikari:
-      poolName: hikari-connection-pool
-      maximumPoolSize: 10
-      minimumIdle: 2
-      idleTimeout: 1800000
-  jpa.hibernate.ddl-auto: validate
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 18000000
   liquibase:
-    enabled: true
     contexts: prod
-    change-log: classpath:/db-changelog.xml
-    liquibaseSchema: liquibase
-    user: ${spring.datasource.username}
-    password: ${spring.datasource.password}
-    rollback-file: liquibase-rollback.sql
-    test-rollback-on-update: true

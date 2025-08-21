@@ -59,10 +59,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>3.14.0</version>
                 <configuration>
                     <source>11</source>
                     <target>11</target>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>1.18.38</version>
+						</path>
+					</annotationProcessorPaths>
                 </configuration>
             </plugin>
 
@@ -140,8 +147,6 @@
 					<systemPropertyVariables>
 						<derby.stream.error.file>log/derby.log</derby.stream.error.file>
 						<junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>
-						<de.adesso.junitinsights.enabled>true</de.adesso.junitinsights.enabled>
-						<de.adesso.junitinsights.reportpath>target/junitinsights-reports/</de.adesso.junitinsights.reportpath>
 					</systemPropertyVariables>
 					<properties>
 						<configurationParameters> <!-- Due to use of @MockBean: https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#testcontext-parallel-test-execution -->
@@ -228,7 +233,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.2.0.RELEASE</version>
+				<version>3.5.4</version>
 				<configuration>
 					<executable>true</executable>
 				</configuration>
@@ -373,12 +378,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>de.adesso</groupId>
-			<artifactId>junit-insights</artifactId>
-			<version>1.1.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>com.codeborne</groupId>
 			<artifactId>selenide</artifactId>
 			<version>5.24.2</version>
@@ -412,7 +411,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.20</version>
+			<version>1.18.38</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -443,8 +442,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>2.5.4</version>
+			<version>3.5.4</version>
 		</dependency>
+<dependency>
+    <groupId>io.micrometer</groupId>
+    <artifactId>micrometer-registry-prometheus</artifactId>
+</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>

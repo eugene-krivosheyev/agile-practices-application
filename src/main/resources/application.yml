@@ -34,9 +34,13 @@ server:
 management:
   metrics:
     enable.all: true
+    export.prometheus.enabled: true
     web.server.request.autotime.enabled: true
   endpoints.web.exposure.include: '*'
-  endpoint.shutdown.enabled: true
+  endpoint:
+    health.show-details: always
+    shutdown.enabled: true
+    prometheus.enabled: true
 
 httpPool:
   maxTotal: 100
